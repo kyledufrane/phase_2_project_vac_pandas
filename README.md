@@ -7,12 +7,12 @@
 
 ## Business Understanding
 
-Our stakeholder is a family that is moving to the Seattle area. They're looking for a solution that will enable them to search for properties based for their needs.  
+Our stakeholder is a family that is moving to the Seattle area. They're looking for a solution that will enable them to search for properties.  
 
 
 ### Data Understanding
 
-This project uses the King County House Sales dataset, which can be found in  `KC_with_hoods.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. Through our Linear Regression model we can show what elements have an effect on the sale price of a house and accurately predict what the price will be. We found that the top three main factors on sale price are:
+This project uses the King County House Sales dataset, which can be found in  `KC_with_hoods.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. Through our Linear Regression model we can show what elements have an effect on the sale price of a house and accurately predict what the price will be on similair properties. We found that the top two main factors on sale price are:
 
 * Zip_city
 * yr_renovated
@@ -22,13 +22,13 @@ This dataset contains house sale prices for King County, which includes Seattle.
 
 ### Data Preparation
 
-Our exploratory data analysis began with identifying feature types and null values. We elminated all null values and replaced them with the median value of their respective columns due to the columns having a binary value. I.E. 1 in waterfront shows the house is waterfront while 0 shows the  house is not waterfront property. 
+Our exploratory data analysis began with identifying feature types and null values. We eliminated all null values and replaced them with the median value of their respective columns due to the columns having a binary value. I.E. 1 in waterfront shows the house is waterfront while 0 shows the  house is not waterfront property. 
 
-Next, we stripped the data column and created two separate columns (year and month). Once the columns were created we used the OrdinalEncoder to created new columns for each value within the column.
+Next, we stripped the date column and created two separate columns (year and month). Once the columns were created we used the OrdinalEncoder to created new columns for each value within the column inturn this will add value to our model.
 
-Once our data was cleaned, we identified our highest correlated columns to use in the model and dropped any that may negatively effect out model. When multicollinearity was identified, we removed one of the values from the pair which had the least effect on the model. In total, we found two instances of two values having a high collinearity with each other. We chose to drop sqft_lot and sqft_above. See below results.
+Once our data was cleaned, we identified our highest correlated columns to use in the model and dropped any that may negatively effect out model. When multicollinearity was identified (two columns correlating with eachother excluding the target (price)), we removed one of the values from the pair which had the least effect on the model. In total, we found two instances of two values having a high collinearity with each other. We chose to drop sqft_lot and sqft_above. See below results.
 
-Lastly, we chose our relevant columns that would have a positive effect on the model. Refer to techincal notebook for said columns. 
+Lastly, we chose our relevant columns that would have a positive effect on the model. Please refer to techincal notebook for these columns. 
 
 
 Collinearity:
@@ -75,9 +75,8 @@ Multicollinearity:
 
 ## Modeling
 
-This project utilized Linear Regression and follows the assumptions of Linear Regression. Below you will see our assumption checks based on our final model:
 
-To take advantage of other correlations we used PolynomialFeatures from the sklearn.preprossing library. Our findings showed a strong correlation between square footage(x3) and grade(x9). Seeing this correlation we multiplied the columns by eachother and saw an increase in the R-squared value of 0.04.
+To take advantage of other correlations we used PolynomialFeatures from the sklearn.preprossing library. Our findings showed a strong correlation between square footage(x3) and grade(x9). Seeing this correlation we multiplied the columns by eachother and saw an increase in the R-squared value by 0.04.
 
 PolynomnialFeatures(degree=2) results:
 
@@ -98,13 +97,20 @@ PolynomnialFeatures(degree=2) results:
 | x0 x13  |  0.938750    |
 | x3 x9   |  0.756248    |
 
+
+
 Lastly, for our final model, we used the OneHotEncoder through the sklearn.preprocessing library. We encoded three categorical values being the mo_sold (month sold), Zip_city (city & zip code), yr_renovated (year renovated). 
 
-Once these items were encoded our R-squared increased 0.84.
+Once these items were encoded our R-squared increased to 0.84.
 
 
 ### Evaluating
 
+Here is a brief overview of our model building process. For further detail please refer to the technical notebook.
+
+![Presentation Slide](Visualizations/Model_Diagram.png)
+
+Below are the Linear Regression assumption checks we used on our final model:
 
 **Q-Q Plot**
 
@@ -121,7 +127,8 @@ Once these items were encoded our R-squared increased 0.84.
 
 ### Deployment
 
-Note: To utilize the interactive maps download a local web server, download the files to your local pc, and open them in a local web browser. 
+
+**Note:** To utilize the interactive maps download a local web server(such as personal web server in the app store), download the files to your local pc, and open them in a local web browser. 
 
 **Interactive Map** based on a filter of 4 bedroom homes that are greater than 4750 sq ft
 
@@ -133,15 +140,26 @@ Note: To utilize the interactive maps download a local web server, download the 
 ![Coefficient Map](Visualizations/choro_map.html)
 
 
+
 ### Next Steps
 
 Create an interactive front end on a public server for end users to interact with.
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](final_notebook.ipynb) or our [presentation](final_presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](Technical Notebook.ipynb) or our [presentation](final_presentation.pdf).
 
+If you have any additional questions please contact either of us at:
 
+    Kyle Dufrane
+    
+        Email: kyle.dufrane@gmail.com
+        Github: kyledufrane
+    
+     Kevin McDonough
+         
+         Email: kpmcdonough@gmail.com
+         Github: KPMcDonough49
 
 ## Repository Structure
 
