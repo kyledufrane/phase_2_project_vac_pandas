@@ -110,7 +110,9 @@ Once these items were encoded our R-squared increased 0.84.
 
 ![Q-Q Plot](Visualizations/qqplot.png)
 
+**Heteroscedasticity**
 
+![Heteroscedasticity](Visualizations/residuals.png)
 
 **Normalization**
 
