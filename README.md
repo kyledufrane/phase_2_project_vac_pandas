@@ -114,13 +114,21 @@ Below are the Linear Regression assumption checks we used on our final model:
 
 **Q-Q Plot**
 
+There are tails on both sides of the q-q plot which, we believe, are due to location and square footage. We discuss this further in the technical notebook. 
+
 ![Q-Q Plot](Visualizations/qqplot.png)
+
 
 **Heteroscedasticity**
 
+The heteroscedasticity are showing an identical story to the q-q plot. We have some outliers which our model under predicted the housing price which, we believe, is due to expensive neighborhoods having a higher price per square foot. 
+
 ![Heteroscedasticity](Visualizations/heter.png)
 
+
 **Normalization**
+
+This shows our normal distribution of our residuals. 
 
 ![Normalization](Visualizations/residuals_hist.png)
 
