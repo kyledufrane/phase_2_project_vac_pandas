@@ -33,26 +33,26 @@ Lastly, we chose our relevant columns that would have a positive effect on the m
 
 Collinearity:
 
-|  Column        |Collinearity|
-|----------------|:----------:|
-| price          |   1.000000 |
-| prediction     |   0.926310 |
-| sqft_grade     |   0.756248 |
-| sqft_living    |   0.701917 |
-| grade          |   0.667951 |
-| sqft_living15  |   0.585241 |
-| bathrooms      |   0.525906 | 
-| view           |   0.393497 |
-| residual       |   0.376762 | 
-| sqft_basement  |   0.321108 | 
-| bedrooms       |   0.308787 | 
-| waterfront     |   0.264306 |
-| floors         |   0.256804 |
-| sqft_lot15     |   0.082845 |
-| yr_built       |   0.053953 |
-| condition      |   0.036056 |
-| Yr_sold        |   0.003727 | 
-| zipcode        |  -0.053402 |
+|  Column        | Collinearity |
+|----------------|:------------:|
+| price          |   1.000000   |
+| prediction     |   0.926310   |
+| sqft_grade     |   0.756248   |
+| sqft_living    |   0.701917   |
+| grade          |   0.667951   |
+| sqft_living15  |   0.585241   |
+| bathrooms      |   0.525906   | 
+| view           |   0.393497   |
+| residual       |   0.376762   | 
+| sqft_basement  |   0.321108   | 
+| bedrooms       |   0.308787   | 
+| waterfront     |   0.264306   |
+| floors         |   0.256804   |
+| sqft_lot15     |   0.082845   |
+| yr_built       |   0.053953   |
+| condition      |   0.036056   |
+| Yr_sold        |   0.003727   | 
+| zipcode        |  -0.053402   |
 
 
 Multicollinearity:
@@ -76,20 +76,6 @@ Multicollinearity:
 ## Modeling
 
 This project utilized Linear Regression and follows the assumptions of Linear Regression. Below you will see our assumption checks based on our final model:
-
-**Q-Q Plot**
-
-![Q-Q Plot](Visualizations/qqplot.png)
-
-**Heteroscedasticity**
-
-![Heteroscedasticity](Visualizations/residuals.png)
-
-**Normalization**
-
-![Normalization](Visualizations/residuals_hist.png)
-
-
 
 To take advantage of other correlations we used PolynomialFeatures from the sklearn.preprossing library. Our findings showed a strong correlation between square footage(x3) and grade(x9). Seeing this correlation we multiplied the columns by eachother and saw an increase in the R-squared value of 0.04.
 
@@ -120,14 +106,30 @@ Once these items were encoded our R-squared increased 0.84.
 ### Evaluating
 
 
+**Q-Q Plot**
+
+![Q-Q Plot](Visualizations/qqplot.png)
+
+**Heteroscedasticity**
+
+![Heteroscedasticity](Visualizations/residuals.png)
+
+**Normalization**
+
+![Normalization](Visualizations/residuals_hist.png)
+
 
 ### Deployment
+
 
 
 ### Next Steps
 
 
 ## For More Information
+
+Please review our full analysis in [our Jupyter Notebook](./final_notebook.ipynb) or our [presentation](./final_presentation.pdf).
+
 
 
 ## Repository Structure

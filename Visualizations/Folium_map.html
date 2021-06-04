@@ -1,0 +1,3067 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6ec4d568db694d3891596f3da2aa63ea {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6ec4d568db694d3891596f3da2aa63ea" ></div>
+        
+    
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#maplegend" ).draggable({
+                    start: function (event, ui) {
+                        $(this).css({
+                            right: "auto",
+                            top: "auto",
+                            bottom: "auto"
+                        });
+                    }
+                });
+});
+  </script>
+</head>
+<body>
+<div id='maplegend' class='maplegend' 
+    style='position: absolute; z-index:9999; border:4px solid grey; background-color:rgba(255, 255, 255, 0.8);
+     border-radius:2px; padding: 20px; font-size:20px; right: 50px; bottom: 20px;'>
+<div class='legend-title'>Home Price</div>
+<div class='legend-scale'>
+  <ul class='legend-labels'>
+    <li><span style='background:green;opacity:0.7;'></span><$750k</li>
+    <li><span style='background:blue;opacity:0.7;'></span>$750k-$1.5m</li>
+    <li><span style='background:orange;opacity:0.7;'></span>$1.5m-$2.25m</li>
+    <li><span style='background:red;opacity:0.7;'></span>>$2.25m</li>
+  </ul>
+</div>
+</div>
+</body>
+</html>
+<style type='text/css'>
+  .maplegend .legend-title {
+    text-align: left;
+    margin-bottom:50px;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .maplegend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .maplegend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 40px;
+    margin-bottom: 2px;
+    }
+  .maplegend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 40px;
+    width: 30px;
+    margin-right: 15px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
+  .maplegend .legend-source {
+    font-size: 80%;
+    color: #777;
+    clear: both;
+    }
+  .maplegend a {
+    color: #777;
+    }
+</style>
+</body>
+<script>    
+    
+            var map_6ec4d568db694d3891596f3da2aa63ea = L.map(
+                "map_6ec4d568db694d3891596f3da2aa63ea",
+                {
+                    center: [47.47, -121.84],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e09b1d41b5aa4f9a88581d261225607a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var marker_de5392317e594255b889dd16863a09c6 = L.marker(
+                [47.6561, -122.005],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_2f131daed9cd4d108a2547b0fc004445 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_de5392317e594255b889dd16863a09c6.setIcon(icon_2f131daed9cd4d108a2547b0fc004445);
+        
+    
+        var popup_935fc5ccb2604c819789465524302f89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee9fb4c222c944b48e79d02c999a3696 = $(`<div id="html_ee9fb4c222c944b48e79d02c999a3696" style="width: 100.0%; height: 100.0%;">Price: 1230000.0, Square Feet: 5420, Neighborhood: N/A         Predicted Price: 1647966.9497574712</div>`)[0];
+            popup_935fc5ccb2604c819789465524302f89.setContent(html_ee9fb4c222c944b48e79d02c999a3696);
+        
+
+        marker_de5392317e594255b889dd16863a09c6.bindPopup(popup_935fc5ccb2604c819789465524302f89)
+        ;
+
+        
+    
+    
+            var marker_1550df9b80574d68bd60733a39752980 = L.marker(
+                [47.562, -122.162],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_1113a09404454c2d82fe95ed0c9799b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_1550df9b80574d68bd60733a39752980.setIcon(icon_1113a09404454c2d82fe95ed0c9799b2);
+        
+    
+        var popup_5d881ed894004a5f9096b4ae56636cbb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a88bcad4b20413a8d1814a12c3ee984 = $(`<div id="html_9a88bcad4b20413a8d1814a12c3ee984" style="width: 100.0%; height: 100.0%;">Price: 2250000.0, Square Feet: 5180, Neighborhood: Somerset         Predicted Price: 1908059.0824935057</div>`)[0];
+            popup_5d881ed894004a5f9096b4ae56636cbb.setContent(html_9a88bcad4b20413a8d1814a12c3ee984);
+        
+
+        marker_1550df9b80574d68bd60733a39752980.bindPopup(popup_5d881ed894004a5f9096b4ae56636cbb)
+        ;
+
+        
+    
+    
+            var marker_3fbd77a149ab4e62a57072de00a525bf = L.marker(
+                [47.6312, -122.223],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_28e2744607e04d40b09b08cb10c0a130 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3fbd77a149ab4e62a57072de00a525bf.setIcon(icon_28e2744607e04d40b09b08cb10c0a130);
+        
+    
+        var popup_5ec2310ff2aa49c8b67800e4bbebc116 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_394139486dad403ea9befee523fe068e = $(`<div id="html_394139486dad403ea9befee523fe068e" style="width: 100.0%; height: 100.0%;">Price: 2900000.0, Square Feet: 5050, Neighborhood: N/A         Predicted Price: 2234554.7650701134</div>`)[0];
+            popup_5ec2310ff2aa49c8b67800e4bbebc116.setContent(html_394139486dad403ea9befee523fe068e);
+        
+
+        marker_3fbd77a149ab4e62a57072de00a525bf.bindPopup(popup_5ec2310ff2aa49c8b67800e4bbebc116)
+        ;
+
+        
+    
+    
+            var marker_d4a2144e6b064b73aec80141c51ed983 = L.marker(
+                [47.7285, -122.042],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_a3d1434dc03e42e6a53e80257d295b19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d4a2144e6b064b73aec80141c51ed983.setIcon(icon_a3d1434dc03e42e6a53e80257d295b19);
+        
+    
+        var popup_c955abac3b9f4eeaa7d4179d50d06594 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e88ee5373f04498b85282734c817c11 = $(`<div id="html_3e88ee5373f04498b85282734c817c11" style="width: 100.0%; height: 100.0%;">Price: 1370000.0, Square Feet: 5310, Neighborhood: Cottage Lake         Predicted Price: 1605872.8466189858</div>`)[0];
+            popup_c955abac3b9f4eeaa7d4179d50d06594.setContent(html_3e88ee5373f04498b85282734c817c11);
+        
+
+        marker_d4a2144e6b064b73aec80141c51ed983.bindPopup(popup_c955abac3b9f4eeaa7d4179d50d06594)
+        ;
+
+        
+    
+    
+            var marker_f28d2308a05e41219d928a4313ce92fe = L.marker(
+                [47.6179, -122.005],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_d326c63beb244b108b39dc5c917c59ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f28d2308a05e41219d928a4313ce92fe.setIcon(icon_d326c63beb244b108b39dc5c917c59ea);
+        
+    
+        var popup_7548e7aad085479a91c96d0887e73ad0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23b679ab24594b228f68af9849069725 = $(`<div id="html_23b679ab24594b228f68af9849069725" style="width: 100.0%; height: 100.0%;">Price: 1390000.0, Square Feet: 4860, Neighborhood: N/A         Predicted Price: 1141886.3647811878</div>`)[0];
+            popup_7548e7aad085479a91c96d0887e73ad0.setContent(html_23b679ab24594b228f68af9849069725);
+        
+
+        marker_f28d2308a05e41219d928a4313ce92fe.bindPopup(popup_7548e7aad085479a91c96d0887e73ad0)
+        ;
+
+        
+    
+    
+            var marker_468a3034825b4760a5dc8aba47daedf4 = L.marker(
+                [47.6415, -122.285],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_bd78700bdbf642b1a2f5f6bde0104d51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_468a3034825b4760a5dc8aba47daedf4.setIcon(icon_bd78700bdbf642b1a2f5f6bde0104d51);
+        
+    
+        var popup_ddad1040a03048928def2dad78429cf5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57fa035d8517424698748294e0d09eed = $(`<div id="html_57fa035d8517424698748294e0d09eed" style="width: 100.0%; height: 100.0%;">Price: 2250000.0, Square Feet: 4760, Neighborhood: Edgewater Park         Predicted Price: 1512799.7703939658</div>`)[0];
+            popup_ddad1040a03048928def2dad78429cf5.setContent(html_57fa035d8517424698748294e0d09eed);
+        
+
+        marker_468a3034825b4760a5dc8aba47daedf4.bindPopup(popup_ddad1040a03048928def2dad78429cf5)
+        ;
+
+        
+    
+    
+            var marker_04a97699d9e24fb293f645e1ad838d3a = L.marker(
+                [47.7466, -122.029],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_33797e53e756443ead00c917ba7aa6d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_04a97699d9e24fb293f645e1ad838d3a.setIcon(icon_33797e53e756443ead00c917ba7aa6d3);
+        
+    
+        var popup_4859ff7c76784d6a87ffa0988aeed277 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2defa7c26df94fdb8cd7ab83d2396a19 = $(`<div id="html_2defa7c26df94fdb8cd7ab83d2396a19" style="width: 100.0%; height: 100.0%;">Price: 930000.0, Square Feet: 6050, Neighborhood: N/A         Predicted Price: 1288737.8380172101</div>`)[0];
+            popup_4859ff7c76784d6a87ffa0988aeed277.setContent(html_2defa7c26df94fdb8cd7ab83d2396a19);
+        
+
+        marker_04a97699d9e24fb293f645e1ad838d3a.bindPopup(popup_4859ff7c76784d6a87ffa0988aeed277)
+        ;
+
+        
+    
+    
+            var marker_da046a4b40654082b9a16d868b92b5f7 = L.marker(
+                [47.5602, -122.227],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_00721455d354409d8a8aeb98ea44a6ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_da046a4b40654082b9a16d868b92b5f7.setIcon(icon_00721455d354409d8a8aeb98ea44a6ab);
+        
+    
+        var popup_20b33ada30c047a4a8d62454d3998604 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05bd127b20a84765ba5669b4c3ec8d74 = $(`<div id="html_05bd127b20a84765ba5669b4c3ec8d74" style="width: 100.0%; height: 100.0%;">Price: 2400000.0, Square Feet: 4890, Neighborhood: Mercer Heights         Predicted Price: 1852456.6001152105</div>`)[0];
+            popup_20b33ada30c047a4a8d62454d3998604.setContent(html_05bd127b20a84765ba5669b4c3ec8d74);
+        
+
+        marker_da046a4b40654082b9a16d868b92b5f7.bindPopup(popup_20b33ada30c047a4a8d62454d3998604)
+        ;
+
+        
+    
+    
+            var marker_2e861acfe56c4603bdd13dbae50906df = L.marker(
+                [47.323, -122.044],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_9ebef1e62f7749519177418106bc4178 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2e861acfe56c4603bdd13dbae50906df.setIcon(icon_9ebef1e62f7749519177418106bc4178);
+        
+    
+        var popup_07cb1e45f6c44a8e8d2e382d98cc4707 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d881744089d45ef9c003d2fe58944fe = $(`<div id="html_9d881744089d45ef9c003d2fe58944fe" style="width: 100.0%; height: 100.0%;">Price: 935000.0, Square Feet: 5670, Neighborhood: N/A         Predicted Price: 1717752.5342938092</div>`)[0];
+            popup_07cb1e45f6c44a8e8d2e382d98cc4707.setContent(html_9d881744089d45ef9c003d2fe58944fe);
+        
+
+        marker_2e861acfe56c4603bdd13dbae50906df.bindPopup(popup_07cb1e45f6c44a8e8d2e382d98cc4707)
+        ;
+
+        
+    
+    
+            var marker_ebc4cd6bcf8546eda1828dda96438e6f = L.marker(
+                [47.3069, -122.148],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_e5f9ba617b914ef9bec452b367744c54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ebc4cd6bcf8546eda1828dda96438e6f.setIcon(icon_e5f9ba617b914ef9bec452b367744c54);
+        
+    
+        var popup_3e93b492c06e47e29882d733c8099a8c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_611f1e99cd704643a9f94ff2829dfb65 = $(`<div id="html_611f1e99cd704643a9f94ff2829dfb65" style="width: 100.0%; height: 100.0%;">Price: 835000.0, Square Feet: 4930, Neighborhood: Auburn         Predicted Price: 1467990.3056550473</div>`)[0];
+            popup_3e93b492c06e47e29882d733c8099a8c.setContent(html_611f1e99cd704643a9f94ff2829dfb65);
+        
+
+        marker_ebc4cd6bcf8546eda1828dda96438e6f.bindPopup(popup_3e93b492c06e47e29882d733c8099a8c)
+        ;
+
+        
+    
+    
+            var marker_9046ebd80f78427fbccacce8831a0858 = L.marker(
+                [47.5852, -121.966],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_8b07e8b51cff4ad7951d31899d275f2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9046ebd80f78427fbccacce8831a0858.setIcon(icon_8b07e8b51cff4ad7951d31899d275f2d);
+        
+    
+        var popup_0f299c1294ff4b81ab81688cd26ab659 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6337664056de440f9d82188b35ff76ab = $(`<div id="html_6337664056de440f9d82188b35ff76ab" style="width: 100.0%; height: 100.0%;">Price: 1060000.0, Square Feet: 5320, Neighborhood: Sammamish         Predicted Price: 1599699.6099427384</div>`)[0];
+            popup_0f299c1294ff4b81ab81688cd26ab659.setContent(html_6337664056de440f9d82188b35ff76ab);
+        
+
+        marker_9046ebd80f78427fbccacce8831a0858.bindPopup(popup_0f299c1294ff4b81ab81688cd26ab659)
+        ;
+
+        
+    
+    
+            var marker_568911bb2e4840c28bdbc8f819e65988 = L.marker(
+                [47.351000000000006, -122.087],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_4235ca2d418648c6b732f6b21a023d2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_568911bb2e4840c28bdbc8f819e65988.setIcon(icon_4235ca2d418648c6b732f6b21a023d2a);
+        
+    
+        var popup_d510474b3f434874989dc0e79170aea0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_624eb2d63776420fae9488052c5d42a5 = $(`<div id="html_624eb2d63776420fae9488052c5d42a5" style="width: 100.0%; height: 100.0%;">Price: 610000.0, Square Feet: 5450, Neighborhood: Winterwood Estates         Predicted Price: 1092591.355451321</div>`)[0];
+            popup_d510474b3f434874989dc0e79170aea0.setContent(html_624eb2d63776420fae9488052c5d42a5);
+        
+
+        marker_568911bb2e4840c28bdbc8f819e65988.bindPopup(popup_d510474b3f434874989dc0e79170aea0)
+        ;
+
+        
+    
+    
+            var marker_b02f508011804d049c00666c864dd221 = L.marker(
+                [47.3065, -122.158],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_3fb8578e5aa84e1cb4d813a0b4a60989 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b02f508011804d049c00666c864dd221.setIcon(icon_3fb8578e5aa84e1cb4d813a0b4a60989);
+        
+    
+        var popup_313cd1a397054dd4bae0680b053fc9b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3341af2075354c258e61e442f271ef4b = $(`<div id="html_3341af2075354c258e61e442f271ef4b" style="width: 100.0%; height: 100.0%;">Price: 930000.0, Square Feet: 5710, Neighborhood: Auburn         Predicted Price: 1512835.9794625496</div>`)[0];
+            popup_313cd1a397054dd4bae0680b053fc9b1.setContent(html_3341af2075354c258e61e442f271ef4b);
+        
+
+        marker_b02f508011804d049c00666c864dd221.bindPopup(popup_313cd1a397054dd4bae0680b053fc9b1)
+        ;
+
+        
+    
+    
+            var marker_97c62929480d433699cea0cc73159cc5 = L.marker(
+                [47.6702, -122.26],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_50168c3cdc634658a7aa37ee902c58a6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_97c62929480d433699cea0cc73159cc5.setIcon(icon_50168c3cdc634658a7aa37ee902c58a6);
+        
+    
+        var popup_2a9a9e84c5e844aeb34fd813c91a15b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e89847b691ad45cf807c739fd243f8f0 = $(`<div id="html_e89847b691ad45cf807c739fd243f8f0" style="width: 100.0%; height: 100.0%;">Price: 2530000.0, Square Feet: 5040, Neighborhood: Windermere         Predicted Price: 1804839.9073587684</div>`)[0];
+            popup_2a9a9e84c5e844aeb34fd813c91a15b1.setContent(html_e89847b691ad45cf807c739fd243f8f0);
+        
+
+        marker_97c62929480d433699cea0cc73159cc5.bindPopup(popup_2a9a9e84c5e844aeb34fd813c91a15b1)
+        ;
+
+        
+    
+    
+            var marker_b60f1f297857402291da3c9996971c7b = L.marker(
+                [47.585, -122.222],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_ee02933f780e475c8d9ed8aa57e78991 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b60f1f297857402291da3c9996971c7b.setIcon(icon_ee02933f780e475c8d9ed8aa57e78991);
+        
+    
+        var popup_107638caa73645b3817018a5e7f8693b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8295d95a75d54688a71f692728de8f42 = $(`<div id="html_8295d95a75d54688a71f692728de8f42" style="width: 100.0%; height: 100.0%;">Price: 3850000.0, Square Feet: 5770, Neighborhood: N/A         Predicted Price: 2950603.0316540613</div>`)[0];
+            popup_107638caa73645b3817018a5e7f8693b.setContent(html_8295d95a75d54688a71f692728de8f42);
+        
+
+        marker_b60f1f297857402291da3c9996971c7b.bindPopup(popup_107638caa73645b3817018a5e7f8693b)
+        ;
+
+        
+    
+    
+            var marker_7c604572870a4d27a876d00f28422c34 = L.marker(
+                [47.5524, -122.112],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f2970cd65ec845e183e7e7f4484117b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_7c604572870a4d27a876d00f28422c34.setIcon(icon_f2970cd65ec845e183e7e7f4484117b8);
+        
+    
+        var popup_4113c2812c9a4c589863dbd419cf7147 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a89e60e77d544ab9d42efcdb41cdc2b = $(`<div id="html_6a89e60e77d544ab9d42efcdb41cdc2b" style="width: 100.0%; height: 100.0%;">Price: 1760000.0, Square Feet: 6055, Neighborhood: N/A         Predicted Price: 2267487.7625923473</div>`)[0];
+            popup_4113c2812c9a4c589863dbd419cf7147.setContent(html_6a89e60e77d544ab9d42efcdb41cdc2b);
+        
+
+        marker_7c604572870a4d27a876d00f28422c34.bindPopup(popup_4113c2812c9a4c589863dbd419cf7147)
+        ;
+
+        
+    
+    
+            var marker_943f2692ee554207975fb99f0b60ea87 = L.marker(
+                [47.6444, -122.22],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5b22e9c726c0490598abb3c6dc0737ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_943f2692ee554207975fb99f0b60ea87.setIcon(icon_5b22e9c726c0490598abb3c6dc0737ee);
+        
+    
+        var popup_92dea5a7574643eb9ea1f7caae61c0d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ec3fef973914061b09701e6220eb90a = $(`<div id="html_6ec3fef973914061b09701e6220eb90a" style="width: 100.0%; height: 100.0%;">Price: 1540000.0, Square Feet: 4910, Neighborhood: N/A         Predicted Price: 1820161.8055119552</div>`)[0];
+            popup_92dea5a7574643eb9ea1f7caae61c0d6.setContent(html_6ec3fef973914061b09701e6220eb90a);
+        
+
+        marker_943f2692ee554207975fb99f0b60ea87.bindPopup(popup_92dea5a7574643eb9ea1f7caae61c0d6)
+        ;
+
+        
+    
+    
+            var marker_025b1847e0c94ba3bcafa36d8bb50fb0 = L.marker(
+                [47.6676, -122.069],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_4165d0e8fed541cb852e3ebdb7bdf730 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_025b1847e0c94ba3bcafa36d8bb50fb0.setIcon(icon_4165d0e8fed541cb852e3ebdb7bdf730);
+        
+    
+        var popup_480bfcc99daa48719331c8a6dee95239 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da30601b44ab455a96505ba36392912e = $(`<div id="html_da30601b44ab455a96505ba36392912e" style="width: 100.0%; height: 100.0%;">Price: 1240000.0, Square Feet: 5180, Neighborhood: N/A         Predicted Price: 1464755.957956495</div>`)[0];
+            popup_480bfcc99daa48719331c8a6dee95239.setContent(html_da30601b44ab455a96505ba36392912e);
+        
+
+        marker_025b1847e0c94ba3bcafa36d8bb50fb0.bindPopup(popup_480bfcc99daa48719331c8a6dee95239)
+        ;
+
+        
+    
+    
+            var marker_914584edec1a4535855745723d412d91 = L.marker(
+                [47.5447, -122.124],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_81ed117285504d3a9e696ce20024eb22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_914584edec1a4535855745723d412d91.setIcon(icon_81ed117285504d3a9e696ce20024eb22);
+        
+    
+        var popup_b9635b1ad4464fa6b4850313ddee4467 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ddf519721a504fff9a1c9a62961fe9e6 = $(`<div id="html_ddf519721a504fff9a1c9a62961fe9e6" style="width: 100.0%; height: 100.0%;">Price: 1840000.0, Square Feet: 4870, Neighborhood: N/A         Predicted Price: 1731136.2188153388</div>`)[0];
+            popup_b9635b1ad4464fa6b4850313ddee4467.setContent(html_ddf519721a504fff9a1c9a62961fe9e6);
+        
+
+        marker_914584edec1a4535855745723d412d91.bindPopup(popup_b9635b1ad4464fa6b4850313ddee4467)
+        ;
+
+        
+    
+    
+            var marker_832ce8cf733b4d318b4fdd74bd5b86af = L.marker(
+                [47.6172, -122.23],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_e6d1d471578b4d3b836aa2d6fb88faa5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_832ce8cf733b4d318b4fdd74bd5b86af.setIcon(icon_e6d1d471578b4d3b836aa2d6fb88faa5);
+        
+    
+        var popup_a7f06298adbb46f5a66de072141f2352 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9874773eebd9461e9a0d1d043e7bce95 = $(`<div id="html_9874773eebd9461e9a0d1d043e7bce95" style="width: 100.0%; height: 100.0%;">Price: 2950000.0, Square Feet: 4860, Neighborhood: Eastland         Predicted Price: 2653264.0995942038</div>`)[0];
+            popup_a7f06298adbb46f5a66de072141f2352.setContent(html_9874773eebd9461e9a0d1d043e7bce95);
+        
+
+        marker_832ce8cf733b4d318b4fdd74bd5b86af.bindPopup(popup_a7f06298adbb46f5a66de072141f2352)
+        ;
+
+        
+    
+    
+            var marker_4e2a2fcbba794772a6a1859375f53ede = L.marker(
+                [47.5547, -122.144],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_7cad419913ba4f778b71e7305a598598 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4e2a2fcbba794772a6a1859375f53ede.setIcon(icon_7cad419913ba4f778b71e7305a598598);
+        
+    
+        var popup_12b2c558c94a4205a2b120bdf20cef34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cca70a25d84e44d396c6d4c8ddd6918d = $(`<div id="html_cca70a25d84e44d396c6d4c8ddd6918d" style="width: 100.0%; height: 100.0%;">Price: 2530000.0, Square Feet: 6930, Neighborhood: Hilltop         Predicted Price: 2243302.176629234</div>`)[0];
+            popup_12b2c558c94a4205a2b120bdf20cef34.setContent(html_cca70a25d84e44d396c6d4c8ddd6918d);
+        
+
+        marker_4e2a2fcbba794772a6a1859375f53ede.bindPopup(popup_12b2c558c94a4205a2b120bdf20cef34)
+        ;
+
+        
+    
+    
+            var marker_5d695bedeb86413b94b8dbe9f0c8851f = L.marker(
+                [47.4302, -122.095],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_583e90f49db34d18802a87cd2bb4ac62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5d695bedeb86413b94b8dbe9f0c8851f.setIcon(icon_583e90f49db34d18802a87cd2bb4ac62);
+        
+    
+        var popup_549a7b6103c74342972bb1b6b8631504 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d57bcabcbdac43eab8691dc63dec2023 = $(`<div id="html_d57bcabcbdac43eab8691dc63dec2023" style="width: 100.0%; height: 100.0%;">Price: 1500000.0, Square Feet: 6550, Neighborhood: N/A         Predicted Price: 1819055.5779378568</div>`)[0];
+            popup_549a7b6103c74342972bb1b6b8631504.setContent(html_d57bcabcbdac43eab8691dc63dec2023);
+        
+
+        marker_5d695bedeb86413b94b8dbe9f0c8851f.bindPopup(popup_549a7b6103c74342972bb1b6b8631504)
+        ;
+
+        
+    
+    
+            var marker_8db663b3d31d42c5bf35e41dd926cf08 = L.marker(
+                [47.5285, -122.135],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_89851b2240b943bc9ae526cabba09a96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8db663b3d31d42c5bf35e41dd926cf08.setIcon(icon_89851b2240b943bc9ae526cabba09a96);
+        
+    
+        var popup_53edcbdf894a4cbc84de70f82ee40e9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b0af1e744e64f3fb799e9b1de546281 = $(`<div id="html_0b0af1e744e64f3fb799e9b1de546281" style="width: 100.0%; height: 100.0%;">Price: 1320000.0, Square Feet: 6110, Neighborhood: N/A         Predicted Price: 1764207.408269491</div>`)[0];
+            popup_53edcbdf894a4cbc84de70f82ee40e9d.setContent(html_0b0af1e744e64f3fb799e9b1de546281);
+        
+
+        marker_8db663b3d31d42c5bf35e41dd926cf08.bindPopup(popup_53edcbdf894a4cbc84de70f82ee40e9d)
+        ;
+
+        
+    
+    
+            var marker_fa4a9e8b0f7344f9b09f53a484c6a217 = L.marker(
+                [47.26300000000001, -122.216],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_8a1aaa3518f9421590021ba059fe314b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fa4a9e8b0f7344f9b09f53a484c6a217.setIcon(icon_8a1aaa3518f9421590021ba059fe314b);
+        
+    
+        var popup_45f2faab03b3431bbea012f053faeca0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13ac4f130d3c408b873badc1ec0d0866 = $(`<div id="html_13ac4f130d3c408b873badc1ec0d0866" style="width: 100.0%; height: 100.0%;">Price: 537000.0, Square Feet: 4883, Neighborhood: Lakeland Hills         Predicted Price: 1254702.5199875662</div>`)[0];
+            popup_45f2faab03b3431bbea012f053faeca0.setContent(html_13ac4f130d3c408b873badc1ec0d0866);
+        
+
+        marker_fa4a9e8b0f7344f9b09f53a484c6a217.bindPopup(popup_45f2faab03b3431bbea012f053faeca0)
+        ;
+
+        
+    
+    
+            var marker_151d64a6be804b41a3f5111eedf1e223 = L.marker(
+                [47.5489, -122.092],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_d07c55b858c9447db0cd516325a6e306 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_151d64a6be804b41a3f5111eedf1e223.setIcon(icon_d07c55b858c9447db0cd516325a6e306);
+        
+    
+        var popup_4f67092be1e3417daafda04a9b0957fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba62ccc8a8ce4ef3a10cb89d81ab5a8a = $(`<div id="html_ba62ccc8a8ce4ef3a10cb89d81ab5a8a" style="width: 100.0%; height: 100.0%;">Price: 965000.0, Square Feet: 5010, Neighborhood: Issaquah         Predicted Price: 1124457.5672425807</div>`)[0];
+            popup_4f67092be1e3417daafda04a9b0957fb.setContent(html_ba62ccc8a8ce4ef3a10cb89d81ab5a8a);
+        
+
+        marker_151d64a6be804b41a3f5111eedf1e223.bindPopup(popup_4f67092be1e3417daafda04a9b0957fb)
+        ;
+
+        
+    
+    
+            var marker_b594560ef722447ba8baba6d6399379e = L.marker(
+                [47.4097, -122.063],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_124855e3406448d79e67b8a87b65043c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b594560ef722447ba8baba6d6399379e.setIcon(icon_124855e3406448d79e67b8a87b65043c);
+        
+    
+        var popup_96ca00b27e2b45a28371dbc502f884f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5cec75ffb44645f3838461364ca489d4 = $(`<div id="html_5cec75ffb44645f3838461364ca489d4" style="width: 100.0%; height: 100.0%;">Price: 1350000.0, Square Feet: 5230, Neighborhood: Maple Valley         Predicted Price: 1497852.1164103409</div>`)[0];
+            popup_96ca00b27e2b45a28371dbc502f884f7.setContent(html_5cec75ffb44645f3838461364ca489d4);
+        
+
+        marker_b594560ef722447ba8baba6d6399379e.bindPopup(popup_96ca00b27e2b45a28371dbc502f884f7)
+        ;
+
+        
+    
+    
+            var marker_1e8aae6610984b20a7e1c7c2e9a7f5a3 = L.marker(
+                [47.6374, -122.288],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_99b97daf7f28467c80d37101283c5c69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1e8aae6610984b20a7e1c7c2e9a7f5a3.setIcon(icon_99b97daf7f28467c80d37101283c5c69);
+        
+    
+        var popup_a0ff4ef9b84f426db85e2eb894f84b22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e50afa8737b493e99340f9e37cc39fd = $(`<div id="html_8e50afa8737b493e99340f9e37cc39fd" style="width: 100.0%; height: 100.0%;">Price: 2890000.0, Square Feet: 5780, Neighborhood: Broadmoor         Predicted Price: 2114738.695507115</div>`)[0];
+            popup_a0ff4ef9b84f426db85e2eb894f84b22.setContent(html_8e50afa8737b493e99340f9e37cc39fd);
+        
+
+        marker_1e8aae6610984b20a7e1c7c2e9a7f5a3.bindPopup(popup_a0ff4ef9b84f426db85e2eb894f84b22)
+        ;
+
+        
+    
+    
+            var marker_055f60b998c54f2286ed73151b7e6095 = L.marker(
+                [47.6099, -122.054],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_e37f7c0b170447f7bf1f99fdc1089506 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_055f60b998c54f2286ed73151b7e6095.setIcon(icon_e37f7c0b170447f7bf1f99fdc1089506);
+        
+    
+        var popup_f6742e636e4b495c900a4be86021fc08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a242bf071cb7407d939298d135f82964 = $(`<div id="html_a242bf071cb7407d939298d135f82964" style="width: 100.0%; height: 100.0%;">Price: 700000.0, Square Feet: 5360, Neighborhood: Sammamish         Predicted Price: 1176615.073233959</div>`)[0];
+            popup_f6742e636e4b495c900a4be86021fc08.setContent(html_a242bf071cb7407d939298d135f82964);
+        
+
+        marker_055f60b998c54f2286ed73151b7e6095.bindPopup(popup_f6742e636e4b495c900a4be86021fc08)
+        ;
+
+        
+    
+    
+            var marker_ad428344c10a431d8977a34df69ad1a7 = L.marker(
+                [47.6151, -122.224],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_3a8aed2add764d4192ddbc19e4ddf376 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ad428344c10a431d8977a34df69ad1a7.setIcon(icon_3a8aed2add764d4192ddbc19e4ddf376);
+        
+    
+        var popup_b373f7bb5dbe4aeba2eda0b030f14ea3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18b9cc7e5d374a31b3e716d31f7509a7 = $(`<div id="html_18b9cc7e5d374a31b3e716d31f7509a7" style="width: 100.0%; height: 100.0%;">Price: 4000000.0, Square Feet: 7080, Neighborhood: Eastland         Predicted Price: 3358779.01020241</div>`)[0];
+            popup_b373f7bb5dbe4aeba2eda0b030f14ea3.setContent(html_18b9cc7e5d374a31b3e716d31f7509a7);
+        
+
+        marker_ad428344c10a431d8977a34df69ad1a7.bindPopup(popup_b373f7bb5dbe4aeba2eda0b030f14ea3)
+        ;
+
+        
+    
+    
+            var marker_c628d8012ba6400097592b8a614bfbdf = L.marker(
+                [47.7288, -122.37],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_786968300d1a42d7916a2a7789cecc52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c628d8012ba6400097592b8a614bfbdf.setIcon(icon_786968300d1a42d7916a2a7789cecc52);
+        
+    
+        var popup_9237654425cd4f3bb12dff5827c5902c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fbc588bc03394134be4d50e21e6bca27 = $(`<div id="html_fbc588bc03394134be4d50e21e6bca27" style="width: 100.0%; height: 100.0%;">Price: 2880000.0, Square Feet: 5760, Neighborhood: Broadview         Predicted Price: 2127650.294467839</div>`)[0];
+            popup_9237654425cd4f3bb12dff5827c5902c.setContent(html_fbc588bc03394134be4d50e21e6bca27);
+        
+
+        marker_c628d8012ba6400097592b8a614bfbdf.bindPopup(popup_9237654425cd4f3bb12dff5827c5902c)
+        ;
+
+        
+    
+    
+            var marker_7379f97a0dc34de391a4a3d02e60dbec = L.marker(
+                [47.5986, -121.949],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_2915af14236648b49f44bf04b96486df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_7379f97a0dc34de391a4a3d02e60dbec.setIcon(icon_2915af14236648b49f44bf04b96486df);
+        
+    
+        var popup_20920e6a2d8246a58e7c1ae3810ef4eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4e42a8d807c4210878a27926f066ebe = $(`<div id="html_b4e42a8d807c4210878a27926f066ebe" style="width: 100.0%; height: 100.0%;">Price: 1580000.0, Square Feet: 5830, Neighborhood: N/A         Predicted Price: 1746285.468797002</div>`)[0];
+            popup_20920e6a2d8246a58e7c1ae3810ef4eb.setContent(html_b4e42a8d807c4210878a27926f066ebe);
+        
+
+        marker_7379f97a0dc34de391a4a3d02e60dbec.bindPopup(popup_20920e6a2d8246a58e7c1ae3810ef4eb)
+        ;
+
+        
+    
+    
+            var marker_8307d6717d3c4b8680f306f016c6e5c0 = L.marker(
+                [47.667, -121.994],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5202c86cfae349979fcf36354e137210 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8307d6717d3c4b8680f306f016c6e5c0.setIcon(icon_5202c86cfae349979fcf36354e137210);
+        
+    
+        var popup_a16b0bf41b9745b587a7cab7b58a9a7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_348756442def40348a7108204befb78a = $(`<div id="html_348756442def40348a7108204befb78a" style="width: 100.0%; height: 100.0%;">Price: 1530000.0, Square Feet: 5990, Neighborhood: N/A         Predicted Price: 1825169.2563868712</div>`)[0];
+            popup_a16b0bf41b9745b587a7cab7b58a9a7c.setContent(html_348756442def40348a7108204befb78a);
+        
+
+        marker_8307d6717d3c4b8680f306f016c6e5c0.bindPopup(popup_a16b0bf41b9745b587a7cab7b58a9a7c)
+        ;
+
+        
+    
+    
+            var marker_78e2556c98214072927277a8e52e580b = L.marker(
+                [47.6567, -122.004],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_24669d6f1d4643d1a34e84c8bfd2585f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_78e2556c98214072927277a8e52e580b.setIcon(icon_24669d6f1d4643d1a34e84c8bfd2585f);
+        
+    
+        var popup_8e6957a0858045df8cc652ef288e0bed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b26d68b31ab3402c97715cff37efd229 = $(`<div id="html_b26d68b31ab3402c97715cff37efd229" style="width: 100.0%; height: 100.0%;">Price: 1100000.0, Square Feet: 5070, Neighborhood: N/A         Predicted Price: 1580328.454436242</div>`)[0];
+            popup_8e6957a0858045df8cc652ef288e0bed.setContent(html_b26d68b31ab3402c97715cff37efd229);
+        
+
+        marker_78e2556c98214072927277a8e52e580b.bindPopup(popup_8e6957a0858045df8cc652ef288e0bed)
+        ;
+
+        
+    
+    
+            var marker_07f68363c8b54bbbb7719f5ce75a2b6c = L.marker(
+                [47.5332, -122.265],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_653453a31a2846e1996f8a246b532bc9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_07f68363c8b54bbbb7719f5ce75a2b6c.setIcon(icon_653453a31a2846e1996f8a246b532bc9);
+        
+    
+        var popup_9945affacda54918a938660a482ae113 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f87983bff1ce444bbf4d0715daa953eb = $(`<div id="html_f87983bff1ce444bbf4d0715daa953eb" style="width: 100.0%; height: 100.0%;">Price: 1310000.0, Square Feet: 4750, Neighborhood: Dunlap         Predicted Price: 1321692.8652212338</div>`)[0];
+            popup_9945affacda54918a938660a482ae113.setContent(html_f87983bff1ce444bbf4d0715daa953eb);
+        
+
+        marker_07f68363c8b54bbbb7719f5ce75a2b6c.bindPopup(popup_9945affacda54918a938660a482ae113)
+        ;
+
+        
+    
+    
+            var marker_a4aff24bdf3641fe97e1c2853bcaff2e = L.marker(
+                [47.7149, -122.099],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_752161a9554545d2bcaeaac5b75c29d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a4aff24bdf3641fe97e1c2853bcaff2e.setIcon(icon_752161a9554545d2bcaeaac5b75c29d1);
+        
+    
+        var popup_62f61ec226d443359646339f67f0bdf9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75bb55d5117e452983cd96fd7c96eb03 = $(`<div id="html_75bb55d5117e452983cd96fd7c96eb03" style="width: 100.0%; height: 100.0%;">Price: 1120000.0, Square Feet: 4750, Neighborhood: Cottage Lake         Predicted Price: 1478943.9917556443</div>`)[0];
+            popup_62f61ec226d443359646339f67f0bdf9.setContent(html_75bb55d5117e452983cd96fd7c96eb03);
+        
+
+        marker_a4aff24bdf3641fe97e1c2853bcaff2e.bindPopup(popup_62f61ec226d443359646339f67f0bdf9)
+        ;
+
+        
+    
+    
+            var marker_0982c007f534483b8040231d6d013cc0 = L.marker(
+                [47.5701, -122.188],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_eb1e5729bafd48399771b27fffc92528 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0982c007f534483b8040231d6d013cc0.setIcon(icon_eb1e5729bafd48399771b27fffc92528);
+        
+    
+        var popup_e2604e7f1dc54d2c9d401cf14c744ea3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88b8f7586fad49d8a7aad55ef9183813 = $(`<div id="html_88b8f7586fad49d8a7aad55ef9183813" style="width: 100.0%; height: 100.0%;">Price: 2850000.0, Square Feet: 5040, Neighborhood: Newport Shores         Predicted Price: 1472887.6626765032</div>`)[0];
+            popup_e2604e7f1dc54d2c9d401cf14c744ea3.setContent(html_88b8f7586fad49d8a7aad55ef9183813);
+        
+
+        marker_0982c007f534483b8040231d6d013cc0.bindPopup(popup_e2604e7f1dc54d2c9d401cf14c744ea3)
+        ;
+
+        
+    
+    
+            var marker_8eadd159cc97478ba68592fd3be5a610 = L.marker(
+                [47.5303, -122.131],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_54ad0cf839344171b59d66785d82b042 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8eadd159cc97478ba68592fd3be5a610.setIcon(icon_54ad0cf839344171b59d66785d82b042);
+        
+    
+        var popup_e10fec8118944ac08f6c86671d2cb32f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85c94e615fa64e7292aaac9b47bb2425 = $(`<div id="html_85c94e615fa64e7292aaac9b47bb2425" style="width: 100.0%; height: 100.0%;">Price: 1780000.0, Square Feet: 4890, Neighborhood: N/A         Predicted Price: 1760436.6523691271</div>`)[0];
+            popup_e10fec8118944ac08f6c86671d2cb32f.setContent(html_85c94e615fa64e7292aaac9b47bb2425);
+        
+
+        marker_8eadd159cc97478ba68592fd3be5a610.bindPopup(popup_e10fec8118944ac08f6c86671d2cb32f)
+        ;
+
+        
+    
+    
+            var marker_67fd431b682a4156a6fc7b69aa940cc1 = L.marker(
+                [47.5703, -122.28],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_a43af04e18ee4f3e9afde9e2f1594d38 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_67fd431b682a4156a6fc7b69aa940cc1.setIcon(icon_a43af04e18ee4f3e9afde9e2f1594d38);
+        
+    
+        var popup_5f6cdccfaf284a0a95a90cc56bac6c5c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_420c0d5109d143588cd56f1f5f4a03a8 = $(`<div id="html_420c0d5109d143588cd56f1f5f4a03a8" style="width: 100.0%; height: 100.0%;">Price: 2730000.0, Square Feet: 6410, Neighborhood: Columbia         Predicted Price: 2344541.438238156</div>`)[0];
+            popup_5f6cdccfaf284a0a95a90cc56bac6c5c.setContent(html_420c0d5109d143588cd56f1f5f4a03a8);
+        
+
+        marker_67fd431b682a4156a6fc7b69aa940cc1.bindPopup(popup_5f6cdccfaf284a0a95a90cc56bac6c5c)
+        ;
+
+        
+    
+    
+            var marker_47131c2128c44620a3b0f5e39f23ac5a = L.marker(
+                [47.6488, -122.201],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_00567fcb457b4af5a3f909f0413a4536 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_47131c2128c44620a3b0f5e39f23ac5a.setIcon(icon_00567fcb457b4af5a3f909f0413a4536);
+        
+    
+        var popup_f2efaabd3ebf4cfdaff34b74a6740d60 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_241af148b4bb4fee90b6d0966f2fa70a = $(`<div id="html_241af148b4bb4fee90b6d0966f2fa70a" style="width: 100.0%; height: 100.0%;">Price: 2390000.0, Square Feet: 6330, Neighborhood: Kirkland         Predicted Price: 2558464.259401818</div>`)[0];
+            popup_f2efaabd3ebf4cfdaff34b74a6740d60.setContent(html_241af148b4bb4fee90b6d0966f2fa70a);
+        
+
+        marker_47131c2128c44620a3b0f5e39f23ac5a.bindPopup(popup_f2efaabd3ebf4cfdaff34b74a6740d60)
+        ;
+
+        
+    
+    
+            var marker_1e1ea2631ade40d094f6477ea1498ec1 = L.marker(
+                [47.6287, -122.287],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_0b5370f26a92405192d3ba3b1f05e1b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1e1ea2631ade40d094f6477ea1498ec1.setIcon(icon_0b5370f26a92405192d3ba3b1f05e1b1);
+        
+    
+        var popup_91fa7fbaf835410087df7573a2f72131 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f842b8026f34c18ad4e6a43c705b147 = $(`<div id="html_9f842b8026f34c18ad4e6a43c705b147" style="width: 100.0%; height: 100.0%;">Price: 2400000.0, Square Feet: 5860, Neighborhood: Washington Park         Predicted Price: 1982522.5353625305</div>`)[0];
+            popup_91fa7fbaf835410087df7573a2f72131.setContent(html_9f842b8026f34c18ad4e6a43c705b147);
+        
+
+        marker_1e1ea2631ade40d094f6477ea1498ec1.bindPopup(popup_91fa7fbaf835410087df7573a2f72131)
+        ;
+
+        
+    
+    
+            var marker_db2ee4b4c126432ab2032c42459f22d5 = L.marker(
+                [47.5496, -122.12],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_015f6f0026284a579a518955a24af070 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_db2ee4b4c126432ab2032c42459f22d5.setIcon(icon_015f6f0026284a579a518955a24af070);
+        
+    
+        var popup_d39b283df40d467db91304cfa89d5aab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f00af75193c40709798b26df15f52e1 = $(`<div id="html_2f00af75193c40709798b26df15f52e1" style="width: 100.0%; height: 100.0%;">Price: 1440000.0, Square Feet: 4970, Neighborhood: N/A         Predicted Price: 1731743.1647141464</div>`)[0];
+            popup_d39b283df40d467db91304cfa89d5aab.setContent(html_2f00af75193c40709798b26df15f52e1);
+        
+
+        marker_db2ee4b4c126432ab2032c42459f22d5.bindPopup(popup_d39b283df40d467db91304cfa89d5aab)
+        ;
+
+        
+    
+    
+            var marker_d20d1d5059fa4f438bf4a24cf520c95d = L.marker(
+                [47.5095, -122.247],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_3b7bfc3b58c74716b87582c8dd4030b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d20d1d5059fa4f438bf4a24cf520c95d.setIcon(icon_3b7bfc3b58c74716b87582c8dd4030b0);
+        
+    
+        var popup_1eb27b2303624fb99e2a8e774ded4e85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d0c3c59b5c2458993026506c226c478 = $(`<div id="html_7d0c3c59b5c2458993026506c226c478" style="width: 100.0%; height: 100.0%;">Price: 800000.0, Square Feet: 4940, Neighborhood: Lakeridge         Predicted Price: 1105086.1571958063</div>`)[0];
+            popup_1eb27b2303624fb99e2a8e774ded4e85.setContent(html_7d0c3c59b5c2458993026506c226c478);
+        
+
+        marker_d20d1d5059fa4f438bf4a24cf520c95d.bindPopup(popup_1eb27b2303624fb99e2a8e774ded4e85)
+        ;
+
+        
+    
+    
+            var marker_30266f552ed3429eb5df946f0ec5a9e7 = L.marker(
+                [47.7097, -122.013],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_c4f9783d91814eaab7c31dc6fc1b51a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_30266f552ed3429eb5df946f0ec5a9e7.setIcon(icon_c4f9783d91814eaab7c31dc6fc1b51a7);
+        
+    
+        var popup_d11d9fea38a94e18ae9e8cf3b9bc713e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ecc3dc18f8f4889af3159939278cbe6 = $(`<div id="html_6ecc3dc18f8f4889af3159939278cbe6" style="width: 100.0%; height: 100.0%;">Price: 1940000.0, Square Feet: 7220, Neighborhood: Trilogy         Predicted Price: 2639890.5286766766</div>`)[0];
+            popup_d11d9fea38a94e18ae9e8cf3b9bc713e.setContent(html_6ecc3dc18f8f4889af3159939278cbe6);
+        
+
+        marker_30266f552ed3429eb5df946f0ec5a9e7.bindPopup(popup_d11d9fea38a94e18ae9e8cf3b9bc713e)
+        ;
+
+        
+    
+    
+            var marker_b3adeadb46464127a0108312077efb2f = L.marker(
+                [47.354, -122.293],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_6cc22cc442334e419c509516b5684316 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b3adeadb46464127a0108312077efb2f.setIcon(icon_6cc22cc442334e419c509516b5684316);
+        
+    
+        var popup_1f4a8e6311354d79afc3bb6607d4ce68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_71c12187e4ee4f0296f37997350bc480 = $(`<div id="html_71c12187e4ee4f0296f37997350bc480" style="width: 100.0%; height: 100.0%;">Price: 850000.0, Square Feet: 5440, Neighborhood: N/A         Predicted Price: 869947.1561817832</div>`)[0];
+            popup_1f4a8e6311354d79afc3bb6607d4ce68.setContent(html_71c12187e4ee4f0296f37997350bc480);
+        
+
+        marker_b3adeadb46464127a0108312077efb2f.bindPopup(popup_1f4a8e6311354d79afc3bb6607d4ce68)
+        ;
+
+        
+    
+    
+            var marker_18a56815b9c14c41ae1c8efda832e54b = L.marker(
+                [47.5513, -122.109],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_28ee46ef168f429e9ed842ee28479ab8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_18a56815b9c14c41ae1c8efda832e54b.setIcon(icon_28ee46ef168f429e9ed842ee28479ab8);
+        
+    
+        var popup_340629b92adc4b6eb56010f6552dbf50 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0491302515f4dfdba267a605914ac6e = $(`<div id="html_f0491302515f4dfdba267a605914ac6e" style="width: 100.0%; height: 100.0%;">Price: 1490000.0, Square Feet: 5180, Neighborhood: N/A         Predicted Price: 1965529.7202395624</div>`)[0];
+            popup_340629b92adc4b6eb56010f6552dbf50.setContent(html_f0491302515f4dfdba267a605914ac6e);
+        
+
+        marker_18a56815b9c14c41ae1c8efda832e54b.bindPopup(popup_340629b92adc4b6eb56010f6552dbf50)
+        ;
+
+        
+    
+    
+            var marker_960c7ec7bc8f4cecb6ce18c09a78d007 = L.marker(
+                [47.6454, -122.218],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f4f599e5d64d4d4083af16f306cfbd55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_960c7ec7bc8f4cecb6ce18c09a78d007.setIcon(icon_f4f599e5d64d4d4083af16f306cfbd55);
+        
+    
+        var popup_e70e283462244f1284366fc81ab74d9f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0d600c590884327b73f12a3be168216 = $(`<div id="html_c0d600c590884327b73f12a3be168216" style="width: 100.0%; height: 100.0%;">Price: 2180000.0, Square Feet: 4750, Neighborhood: N/A         Predicted Price: 2055207.2969185505</div>`)[0];
+            popup_e70e283462244f1284366fc81ab74d9f.setContent(html_c0d600c590884327b73f12a3be168216);
+        
+
+        marker_960c7ec7bc8f4cecb6ce18c09a78d007.bindPopup(popup_e70e283462244f1284366fc81ab74d9f)
+        ;
+
+        
+    
+    
+            var marker_7572958c84004d0b995e19ec99f7a6e0 = L.marker(
+                [47.5485, -122.124],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_8b84dd7153044295ae03792bbfe081a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_7572958c84004d0b995e19ec99f7a6e0.setIcon(icon_8b84dd7153044295ae03792bbfe081a1);
+        
+    
+        var popup_3a57d49e32054ae5a4b66610b93c29ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a47f67409884d9985e02c0c1e23908d = $(`<div id="html_4a47f67409884d9985e02c0c1e23908d" style="width: 100.0%; height: 100.0%;">Price: 1530000.0, Square Feet: 5850, Neighborhood: N/A         Predicted Price: 2041208.858475544</div>`)[0];
+            popup_3a57d49e32054ae5a4b66610b93c29ca.setContent(html_4a47f67409884d9985e02c0c1e23908d);
+        
+
+        marker_7572958c84004d0b995e19ec99f7a6e0.bindPopup(popup_3a57d49e32054ae5a4b66610b93c29ca)
+        ;
+
+        
+    
+    
+            var marker_5a880a6ea6a94e319c7335053bc9d737 = L.marker(
+                [47.4858, -122.111],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_4e80e1a0f3cf4cf7bf84b23a0a39b451 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5a880a6ea6a94e319c7335053bc9d737.setIcon(icon_4e80e1a0f3cf4cf7bf84b23a0a39b451);
+        
+    
+        var popup_e79c56377496495aa4a308658e4dd17c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d52325fd2d74481f8ebc4d701971902f = $(`<div id="html_d52325fd2d74481f8ebc4d701971902f" style="width: 100.0%; height: 100.0%;">Price: 915000.0, Square Feet: 5250, Neighborhood: N/A         Predicted Price: 1319337.5507955868</div>`)[0];
+            popup_e79c56377496495aa4a308658e4dd17c.setContent(html_d52325fd2d74481f8ebc4d701971902f);
+        
+
+        marker_5a880a6ea6a94e319c7335053bc9d737.bindPopup(popup_e79c56377496495aa4a308658e4dd17c)
+        ;
+
+        
+    
+    
+            var marker_6e93b665aa4e4b9fafe72bfbe5bb726b = L.marker(
+                [47.5722, -122.236],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_7a2f00da64484afea6f56efd1cbc8b55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6e93b665aa4e4b9fafe72bfbe5bb726b.setIcon(icon_7a2f00da64484afea6f56efd1cbc8b55);
+        
+    
+        var popup_2f5ae66e01a8403096bc500718a9508e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e46bd0391d674f3486198b4e5b6896d2 = $(`<div id="html_e46bd0391d674f3486198b4e5b6896d2" style="width: 100.0%; height: 100.0%;">Price: 2450000.0, Square Feet: 5030, Neighborhood: Mercer Heights         Predicted Price: 1859218.0483364016</div>`)[0];
+            popup_2f5ae66e01a8403096bc500718a9508e.setContent(html_e46bd0391d674f3486198b4e5b6896d2);
+        
+
+        marker_6e93b665aa4e4b9fafe72bfbe5bb726b.bindPopup(popup_2f5ae66e01a8403096bc500718a9508e)
+        ;
+
+        
+    
+    
+            var marker_f9cfa9c5de5b4484ad64a8a9c380aa8f = L.marker(
+                [47.7064, -121.981],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5af0b478e07f4bfcb4000688bb47f8ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f9cfa9c5de5b4484ad64a8a9c380aa8f.setIcon(icon_5af0b478e07f4bfcb4000688bb47f8ea);
+        
+    
+        var popup_97cd6bd6777b4426864921e05368a08f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c29b42dba6284a9e98d36d62c265e176 = $(`<div id="html_c29b42dba6284a9e98d36d62c265e176" style="width: 100.0%; height: 100.0%;">Price: 955000.0, Square Feet: 5660, Neighborhood: N/A         Predicted Price: 1366837.9647476824</div>`)[0];
+            popup_97cd6bd6777b4426864921e05368a08f.setContent(html_c29b42dba6284a9e98d36d62c265e176);
+        
+
+        marker_f9cfa9c5de5b4484ad64a8a9c380aa8f.bindPopup(popup_97cd6bd6777b4426864921e05368a08f)
+        ;
+
+        
+    
+    
+            var marker_9a3381ebe1ce442981c1c22f8d9ede5b = L.marker(
+                [47.4358, -122.085],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_9467ab506f2b46d9b9bc576bf552992e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9a3381ebe1ce442981c1c22f8d9ede5b.setIcon(icon_9467ab506f2b46d9b9bc576bf552992e);
+        
+    
+        var popup_ac26e9ad7790471e825b6dadac3527cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8b2c595d9134a1c84750de6fdc5c6af = $(`<div id="html_d8b2c595d9134a1c84750de6fdc5c6af" style="width: 100.0%; height: 100.0%;">Price: 782000.0, Square Feet: 5270, Neighborhood: Renton         Predicted Price: 1128244.870439027</div>`)[0];
+            popup_ac26e9ad7790471e825b6dadac3527cd.setContent(html_d8b2c595d9134a1c84750de6fdc5c6af);
+        
+
+        marker_9a3381ebe1ce442981c1c22f8d9ede5b.bindPopup(popup_ac26e9ad7790471e825b6dadac3527cd)
+        ;
+
+        
+    
+    
+            var marker_08c6c117393545f7b3137c152713817b = L.marker(
+                [47.6795, -121.991],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5a81428c2043439bb28cdd73f4786e75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_08c6c117393545f7b3137c152713817b.setIcon(icon_5a81428c2043439bb28cdd73f4786e75);
+        
+    
+        var popup_53457bfcbf2840b3a1d6a124d9320d63 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f3db308909244aeaac0b527bf73d526 = $(`<div id="html_5f3db308909244aeaac0b527bf73d526" style="width: 100.0%; height: 100.0%;">Price: 2140000.0, Square Feet: 5150, Neighborhood: N/A         Predicted Price: 1683517.7689491003</div>`)[0];
+            popup_53457bfcbf2840b3a1d6a124d9320d63.setContent(html_5f3db308909244aeaac0b527bf73d526);
+        
+
+        marker_08c6c117393545f7b3137c152713817b.bindPopup(popup_53457bfcbf2840b3a1d6a124d9320d63)
+        ;
+
+        
+    
+    
+            var marker_c68e2f40a3844f54916412474ffd3fab = L.marker(
+                [47.6208, -122.219],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_7c656b4b20734a85bf61c127b9dc0442 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c68e2f40a3844f54916412474ffd3fab.setIcon(icon_7c656b4b20734a85bf61c127b9dc0442);
+        
+    
+        var popup_a342a4ec080b4fdc853ab26ba5284a12 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e001132fbad749ab8fd4efc504b1c903 = $(`<div id="html_e001132fbad749ab8fd4efc504b1c903" style="width: 100.0%; height: 100.0%;">Price: 4490000.0, Square Feet: 6430, Neighborhood: Clyde         Predicted Price: 2696077.159468529</div>`)[0];
+            popup_a342a4ec080b4fdc853ab26ba5284a12.setContent(html_e001132fbad749ab8fd4efc504b1c903);
+        
+
+        marker_c68e2f40a3844f54916412474ffd3fab.bindPopup(popup_a342a4ec080b4fdc853ab26ba5284a12)
+        ;
+
+        
+    
+    
+            var marker_d40298180ba0481b9d46f7e1415a8816 = L.marker(
+                [47.6113, -121.952],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5ead023d773046b3a6955ceb70eb890d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d40298180ba0481b9d46f7e1415a8816.setIcon(icon_5ead023d773046b3a6955ceb70eb890d);
+        
+    
+        var popup_6d7dfa7fd20f4d5a92b9c7d43b861a6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_987dbcecc1f34ea78e5519c67d48389e = $(`<div id="html_987dbcecc1f34ea78e5519c67d48389e" style="width: 100.0%; height: 100.0%;">Price: 1680000.0, Square Feet: 5584, Neighborhood: N/A         Predicted Price: 1620731.345832348</div>`)[0];
+            popup_6d7dfa7fd20f4d5a92b9c7d43b861a6b.setContent(html_987dbcecc1f34ea78e5519c67d48389e);
+        
+
+        marker_d40298180ba0481b9d46f7e1415a8816.bindPopup(popup_6d7dfa7fd20f4d5a92b9c7d43b861a6b)
+        ;
+
+        
+    
+    
+            var marker_444b93e0df5847c5bfd5dbf7894ff5e4 = L.marker(
+                [47.6071, -122.212],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_3a9e2dbcec844d18923c1b824621e91c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_444b93e0df5847c5bfd5dbf7894ff5e4.setIcon(icon_3a9e2dbcec844d18923c1b824621e91c);
+        
+    
+        var popup_51b0534e824b44aaba3612f3e00f370f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_41dfae1a79304ab7a6be9b4b373044db = $(`<div id="html_41dfae1a79304ab7a6be9b4b373044db" style="width: 100.0%; height: 100.0%;">Price: 2580000.0, Square Feet: 5540, Neighborhood: Moorland         Predicted Price: 2234166.6835972425</div>`)[0];
+            popup_51b0534e824b44aaba3612f3e00f370f.setContent(html_41dfae1a79304ab7a6be9b4b373044db);
+        
+
+        marker_444b93e0df5847c5bfd5dbf7894ff5e4.bindPopup(popup_51b0534e824b44aaba3612f3e00f370f)
+        ;
+
+        
+    
+    
+            var marker_31dbdadab1c04b41a477d7b45650dc29 = L.marker(
+                [47.5269, -121.922],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_179fe840e4ca4a79ad88c4fa639a7dec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_31dbdadab1c04b41a477d7b45650dc29.setIcon(icon_179fe840e4ca4a79ad88c4fa639a7dec);
+        
+    
+        var popup_f556d6c08e0d461aa21faf2642f35fee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8aa93bac59a4d26aebb5c464412759e = $(`<div id="html_c8aa93bac59a4d26aebb5c464412759e" style="width: 100.0%; height: 100.0%;">Price: 1340000.0, Square Feet: 5050, Neighborhood: Preston         Predicted Price: 1261488.0049995629</div>`)[0];
+            popup_f556d6c08e0d461aa21faf2642f35fee.setContent(html_c8aa93bac59a4d26aebb5c464412759e);
+        
+
+        marker_31dbdadab1c04b41a477d7b45650dc29.bindPopup(popup_f556d6c08e0d461aa21faf2642f35fee)
+        ;
+
+        
+    
+    
+            var marker_6601ca9c580a4c9fa07795dc5047350f = L.marker(
+                [47.3293, -122.364],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_220795fc92e844098294b079accecfe1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6601ca9c580a4c9fa07795dc5047350f.setIcon(icon_220795fc92e844098294b079accecfe1);
+        
+    
+        var popup_2e36e79495dd41609923fe93ea01ff29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e38dfd20e13d4d0f9089769cea6a3a76 = $(`<div id="html_e38dfd20e13d4d0f9089769cea6a3a76" style="width: 100.0%; height: 100.0%;">Price: 1280000.0, Square Feet: 5844, Neighborhood: N/A         Predicted Price: 1562667.138592015</div>`)[0];
+            popup_2e36e79495dd41609923fe93ea01ff29.setContent(html_e38dfd20e13d4d0f9089769cea6a3a76);
+        
+
+        marker_6601ca9c580a4c9fa07795dc5047350f.bindPopup(popup_2e36e79495dd41609923fe93ea01ff29)
+        ;
+
+        
+    
+    
+            var marker_07f6a2d9333445e7875fe523be915675 = L.marker(
+                [47.7245, -122.095],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_1d7d4ade8bbe469b870a5565a3ce1743 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_07f6a2d9333445e7875fe523be915675.setIcon(icon_1d7d4ade8bbe469b870a5565a3ce1743);
+        
+    
+        var popup_857397257b044d8e81da101b9449d39b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_805a38804c3347ce9f682efd5ce0bdf1 = $(`<div id="html_805a38804c3347ce9f682efd5ce0bdf1" style="width: 100.0%; height: 100.0%;">Price: 1160000.0, Square Feet: 5860, Neighborhood: Cottage Lake         Predicted Price: 1500650.9671476278</div>`)[0];
+            popup_857397257b044d8e81da101b9449d39b.setContent(html_805a38804c3347ce9f682efd5ce0bdf1);
+        
+
+        marker_07f6a2d9333445e7875fe523be915675.bindPopup(popup_857397257b044d8e81da101b9449d39b)
+        ;
+
+        
+    
+    
+            var marker_d484a1de610a4d4e814873e43d5251bd = L.marker(
+                [47.676, -121.882],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_b9194c1f084242db95d4a8005274bafc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d484a1de610a4d4e814873e43d5251bd.setIcon(icon_b9194c1f084242db95d4a8005274bafc);
+        
+    
+        var popup_63d227f8d3e94db488dd9cd137791d98 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d5eaf1b056f41cb986b6e55592fd25e = $(`<div id="html_8d5eaf1b056f41cb986b6e55592fd25e" style="width: 100.0%; height: 100.0%;">Price: 937500.0, Square Feet: 5545, Neighborhood: Carnation         Predicted Price: 1563073.376605052</div>`)[0];
+            popup_63d227f8d3e94db488dd9cd137791d98.setContent(html_8d5eaf1b056f41cb986b6e55592fd25e);
+        
+
+        marker_d484a1de610a4d4e814873e43d5251bd.bindPopup(popup_63d227f8d3e94db488dd9cd137791d98)
+        ;
+
+        
+    
+    
+            var marker_9602a4ab53d44e9b999118bfa28d38f0 = L.marker(
+                [47.6052, -122.064],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_78d9a9683acc407c8da6ed351a31d0b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9602a4ab53d44e9b999118bfa28d38f0.setIcon(icon_78d9a9683acc407c8da6ed351a31d0b9);
+        
+    
+        var popup_934acad32c40478ebcaea5270add0631 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52527410aad0479d847d013998b89d87 = $(`<div id="html_52527410aad0479d847d013998b89d87" style="width: 100.0%; height: 100.0%;">Price: 1230000.0, Square Feet: 5730, Neighborhood: Sammamish         Predicted Price: 1818260.9502519662</div>`)[0];
+            popup_934acad32c40478ebcaea5270add0631.setContent(html_52527410aad0479d847d013998b89d87);
+        
+
+        marker_9602a4ab53d44e9b999118bfa28d38f0.bindPopup(popup_934acad32c40478ebcaea5270add0631)
+        ;
+
+        
+    
+    
+            var marker_b2af27265fd24f1cbb1eb8914b174f11 = L.marker(
+                [47.6003, -122.076],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_a2a3a2b601fc4c99ab45f3befa32ba1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b2af27265fd24f1cbb1eb8914b174f11.setIcon(icon_a2a3a2b601fc4c99ab45f3befa32ba1f);
+        
+    
+        var popup_63a9fa2b06984b3f997087ec87a78947 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7866ccc4b7b4c81adea0e126858dde7 = $(`<div id="html_d7866ccc4b7b4c81adea0e126858dde7" style="width: 100.0%; height: 100.0%;">Price: 1570000.0, Square Feet: 5370, Neighborhood: Sammamish         Predicted Price: 1421350.340526465</div>`)[0];
+            popup_63a9fa2b06984b3f997087ec87a78947.setContent(html_d7866ccc4b7b4c81adea0e126858dde7);
+        
+
+        marker_b2af27265fd24f1cbb1eb8914b174f11.bindPopup(popup_63a9fa2b06984b3f997087ec87a78947)
+        ;
+
+        
+    
+    
+            var marker_3daa039e7f9c43d58afc1eec0b358275 = L.marker(
+                [47.55, -122.103],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_d27c06c6190d4ebabddcdc5956888ad8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3daa039e7f9c43d58afc1eec0b358275.setIcon(icon_d27c06c6190d4ebabddcdc5956888ad8);
+        
+    
+        var popup_e40eb277cc8940fd810c2acfc1f0e710 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4c39a210371e46eeb15422e819198e3e = $(`<div id="html_4c39a210371e46eeb15422e819198e3e" style="width: 100.0%; height: 100.0%;">Price: 1690000.0, Square Feet: 5000, Neighborhood: N/A         Predicted Price: 1857159.874837448</div>`)[0];
+            popup_e40eb277cc8940fd810c2acfc1f0e710.setContent(html_4c39a210371e46eeb15422e819198e3e);
+        
+
+        marker_3daa039e7f9c43d58afc1eec0b358275.bindPopup(popup_e40eb277cc8940fd810c2acfc1f0e710)
+        ;
+
+        
+    
+    
+            var marker_3ebf7bca637d4a9a8b2f92a8c1d1bb43 = L.marker(
+                [47.6605, -122.069],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_3262a7a05f564a169aca76b32e9b87f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_3ebf7bca637d4a9a8b2f92a8c1d1bb43.setIcon(icon_3262a7a05f564a169aca76b32e9b87f1);
+        
+    
+        var popup_c759cce5a22c4d7694eaacaa407df5dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30f7a47e387746bdadf461f7f69c119f = $(`<div id="html_30f7a47e387746bdadf461f7f69c119f" style="width: 100.0%; height: 100.0%;">Price: 1770000.0, Square Feet: 5440, Neighborhood: N/A         Predicted Price: 1875214.2687773963</div>`)[0];
+            popup_c759cce5a22c4d7694eaacaa407df5dd.setContent(html_30f7a47e387746bdadf461f7f69c119f);
+        
+
+        marker_3ebf7bca637d4a9a8b2f92a8c1d1bb43.bindPopup(popup_c759cce5a22c4d7694eaacaa407df5dd)
+        ;
+
+        
+    
+    
+            var marker_2d7770c9161e4ab9914fd300b8921426 = L.marker(
+                [47.3557, -122.29],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_c6e8338cfee8434793666b33824753c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2d7770c9161e4ab9914fd300b8921426.setIcon(icon_c6e8338cfee8434793666b33824753c0);
+        
+    
+        var popup_f4db2ecf0da94b22b42fdd0bb09136c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69f15626bbdf49eb9ebc92cf0d697155 = $(`<div id="html_69f15626bbdf49eb9ebc92cf0d697155" style="width: 100.0%; height: 100.0%;">Price: 545000.0, Square Feet: 5461, Neighborhood: Star Lake         Predicted Price: 942032.1417515154</div>`)[0];
+            popup_f4db2ecf0da94b22b42fdd0bb09136c3.setContent(html_69f15626bbdf49eb9ebc92cf0d697155);
+        
+
+        marker_2d7770c9161e4ab9914fd300b8921426.bindPopup(popup_f4db2ecf0da94b22b42fdd0bb09136c3)
+        ;
+
+        
+    
+    
+            var marker_0f6cf3db25cd48c9b0aaf6bc7ad9f720 = L.marker(
+                [47.7283, -122.046],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f5171de0703043bd8160b069b7523100 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_0f6cf3db25cd48c9b0aaf6bc7ad9f720.setIcon(icon_f5171de0703043bd8160b069b7523100);
+        
+    
+        var popup_690c0a25fa9245c0b82072c22ff1a1d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b0f6c11b0574d1c8b69796e476887ee = $(`<div id="html_5b0f6c11b0574d1c8b69796e476887ee" style="width: 100.0%; height: 100.0%;">Price: 1820000.0, Square Feet: 6640, Neighborhood: Cottage Lake         Predicted Price: 2203700.5770784654</div>`)[0];
+            popup_690c0a25fa9245c0b82072c22ff1a1d7.setContent(html_5b0f6c11b0574d1c8b69796e476887ee);
+        
+
+        marker_0f6cf3db25cd48c9b0aaf6bc7ad9f720.bindPopup(popup_690c0a25fa9245c0b82072c22ff1a1d7)
+        ;
+
+        
+    
+    
+            var marker_ac9218d00fab4189a29084843b0e7e7a = L.marker(
+                [47.661, -122.269],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_3ed8030a2bbe4e6192902484fb627b53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ac9218d00fab4189a29084843b0e7e7a.setIcon(icon_3ed8030a2bbe4e6192902484fb627b53);
+        
+    
+        var popup_8e94ef71ef4247a3bc8230624a89d241 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c96e811ec3f84ae1b4328c1e830ac9ca = $(`<div id="html_c96e811ec3f84ae1b4328c1e830ac9ca" style="width: 100.0%; height: 100.0%;">Price: 2560000.0, Square Feet: 5300, Neighborhood: Laurelhurst         Predicted Price: 2358851.508724696</div>`)[0];
+            popup_8e94ef71ef4247a3bc8230624a89d241.setContent(html_c96e811ec3f84ae1b4328c1e830ac9ca);
+        
+
+        marker_ac9218d00fab4189a29084843b0e7e7a.bindPopup(popup_8e94ef71ef4247a3bc8230624a89d241)
+        ;
+
+        
+    
+    
+            var marker_6b7f87a0378d4a59b0380a86d0281d77 = L.marker(
+                [47.7011, -122.244],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_a98e5a6a0dc64904a1f469a0871da84a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6b7f87a0378d4a59b0380a86d0281d77.setIcon(icon_a98e5a6a0dc64904a1f469a0871da84a);
+        
+    
+        var popup_e4c06a80f55a4dd29058706ada11a25a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46bbe010ce8543519a7b049e76703c9c = $(`<div id="html_46bbe010ce8543519a7b049e76703c9c" style="width: 100.0%; height: 100.0%;">Price: 3000000.0, Square Feet: 4850, Neighborhood: Kirkland         Predicted Price: 2215359.336330765</div>`)[0];
+            popup_e4c06a80f55a4dd29058706ada11a25a.setContent(html_46bbe010ce8543519a7b049e76703c9c);
+        
+
+        marker_6b7f87a0378d4a59b0380a86d0281d77.bindPopup(popup_e4c06a80f55a4dd29058706ada11a25a)
+        ;
+
+        
+    
+    
+            var marker_810e557b058848b09b6515085b46eda7 = L.marker(
+                [47.554, -122.036],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_90d10718373f40d1afd4ad210aa148d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_810e557b058848b09b6515085b46eda7.setIcon(icon_90d10718373f40d1afd4ad210aa148d7);
+        
+    
+        var popup_95e5c6041b3b44299dc7e92fa04ca950 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_92f7f2751cc0486a855f8171b5269f0d = $(`<div id="html_92f7f2751cc0486a855f8171b5269f0d" style="width: 100.0%; height: 100.0%;">Price: 1450000.0, Square Feet: 5000, Neighborhood: Issaquah         Predicted Price: 1525597.4909706528</div>`)[0];
+            popup_95e5c6041b3b44299dc7e92fa04ca950.setContent(html_92f7f2751cc0486a855f8171b5269f0d);
+        
+
+        marker_810e557b058848b09b6515085b46eda7.bindPopup(popup_95e5c6041b3b44299dc7e92fa04ca950)
+        ;
+
+        
+    
+    
+            var marker_eb929324cdc3440bac895ea23d2be28f = L.marker(
+                [47.6406, -122.101],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_832c82c2894645978611d1228b44b829 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eb929324cdc3440bac895ea23d2be28f.setIcon(icon_832c82c2894645978611d1228b44b829);
+        
+    
+        var popup_647d8f541c244f10a030a69f7c90538e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf0ece1e21e448eb9c30d0d2890ca20b = $(`<div id="html_cf0ece1e21e448eb9c30d0d2890ca20b" style="width: 100.0%; height: 100.0%;">Price: 1250000.0, Square Feet: 4980, Neighborhood: Redmond         Predicted Price: 1277636.5610604438</div>`)[0];
+            popup_647d8f541c244f10a030a69f7c90538e.setContent(html_cf0ece1e21e448eb9c30d0d2890ca20b);
+        
+
+        marker_eb929324cdc3440bac895ea23d2be28f.bindPopup(popup_647d8f541c244f10a030a69f7c90538e)
+        ;
+
+        
+    
+    
+            var marker_b49420ffb1674b35a9f9c573cfe737c0 = L.marker(
+                [47.5511, -122.114],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_087df26cc58349049412f1b627858957 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b49420ffb1674b35a9f9c573cfe737c0.setIcon(icon_087df26cc58349049412f1b627858957);
+        
+    
+        var popup_24c9e6d90cd64c2c9140017801a694e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd64231d6e2c47328771f7bbcd93f0f3 = $(`<div id="html_cd64231d6e2c47328771f7bbcd93f0f3" style="width: 100.0%; height: 100.0%;">Price: 1790000.0, Square Feet: 5490, Neighborhood: N/A         Predicted Price: 2035765.748890316</div>`)[0];
+            popup_24c9e6d90cd64c2c9140017801a694e3.setContent(html_cd64231d6e2c47328771f7bbcd93f0f3);
+        
+
+        marker_b49420ffb1674b35a9f9c573cfe737c0.bindPopup(popup_24c9e6d90cd64c2c9140017801a694e3)
+        ;
+
+        
+    
+    
+            var marker_22c4ea2dc36c418599c6ccf88fcdadd9 = L.marker(
+                [47.4548, -121.764],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_2495c51db07b41d7bc8748138e200a3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_22c4ea2dc36c418599c6ccf88fcdadd9.setIcon(icon_2495c51db07b41d7bc8748138e200a3b);
+        
+    
+        var popup_e62a9ba1a88e40c48328dde8f6e23b6c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21dee644b6814c54963bb5c9ec97257d = $(`<div id="html_21dee644b6814c54963bb5c9ec97257d" style="width: 100.0%; height: 100.0%;">Price: 1950000.0, Square Feet: 7420, Neighborhood: N/A         Predicted Price: 2582915.6123808147</div>`)[0];
+            popup_e62a9ba1a88e40c48328dde8f6e23b6c.setContent(html_21dee644b6814c54963bb5c9ec97257d);
+        
+
+        marker_22c4ea2dc36c418599c6ccf88fcdadd9.bindPopup(popup_e62a9ba1a88e40c48328dde8f6e23b6c)
+        ;
+
+        
+    
+    
+            var marker_c049ba114eac4d72803927debbf1db4e = L.marker(
+                [47.5323, -122.238],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_d428c28196374b0d918a9635c6fc5f1d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c049ba114eac4d72803927debbf1db4e.setIcon(icon_d428c28196374b0d918a9635c6fc5f1d);
+        
+    
+        var popup_cb24abbea3c64e6681bd044a69c21397 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4621c16b5d4e4496b0bcab713c537156 = $(`<div id="html_4621c16b5d4e4496b0bcab713c537156" style="width: 100.0%; height: 100.0%;">Price: 1550000.0, Square Feet: 5280, Neighborhood: Mercer Island         Predicted Price: 2008836.0077664223</div>`)[0];
+            popup_cb24abbea3c64e6681bd044a69c21397.setContent(html_4621c16b5d4e4496b0bcab713c537156);
+        
+
+        marker_c049ba114eac4d72803927debbf1db4e.bindPopup(popup_cb24abbea3c64e6681bd044a69c21397)
+        ;
+
+        
+    
+    
+            var marker_fce66f00c2bd4661bc6609f219d0d3bd = L.marker(
+                [47.5592, -122.015],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_b8406de39e1440c69e1357b0bb8f2701 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_fce66f00c2bd4661bc6609f219d0d3bd.setIcon(icon_b8406de39e1440c69e1357b0bb8f2701);
+        
+    
+        var popup_693e95d8cf50433eb746b94f97b3d1c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4d8ebf69a81b4744a16516ebabfe4192 = $(`<div id="html_4d8ebf69a81b4744a16516ebabfe4192" style="width: 100.0%; height: 100.0%;">Price: 1820000.0, Square Feet: 6380, Neighborhood: Hunter's Ridge         Predicted Price: 2170643.7143820385</div>`)[0];
+            popup_693e95d8cf50433eb746b94f97b3d1c6.setContent(html_4d8ebf69a81b4744a16516ebabfe4192);
+        
+
+        marker_fce66f00c2bd4661bc6609f219d0d3bd.bindPopup(popup_693e95d8cf50433eb746b94f97b3d1c6)
+        ;
+
+        
+    
+    
+            var marker_dad731930a844cdf80f610837f602227 = L.marker(
+                [47.5696, -122.09],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_028e38ca8c5e42b79a987539db0e0704 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_dad731930a844cdf80f610837f602227.setIcon(icon_028e38ca8c5e42b79a987539db0e0704);
+        
+    
+        var popup_08cdbf90fe264187b2029a687594ef5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2857895beef44d58444f2e14048f092 = $(`<div id="html_f2857895beef44d58444f2e14048f092" style="width: 100.0%; height: 100.0%;">Price: 2600000.0, Square Feet: 5270, Neighborhood: Issaquah         Predicted Price: 2372806.533823625</div>`)[0];
+            popup_08cdbf90fe264187b2029a687594ef5a.setContent(html_f2857895beef44d58444f2e14048f092);
+        
+
+        marker_dad731930a844cdf80f610837f602227.bindPopup(popup_08cdbf90fe264187b2029a687594ef5a)
+        ;
+
+        
+    
+    
+            var marker_0ff9cbae6a714ef7a29ef0b433cd7a9c = L.marker(
+                [47.405, -122.331],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_afdff6ffe0be45929ab1eafad4856a7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0ff9cbae6a714ef7a29ef0b433cd7a9c.setIcon(icon_afdff6ffe0be45929ab1eafad4856a7c);
+        
+    
+        var popup_531c5c04e0ff480781cbe8430307b7a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec259efc96524db0a9c4717801f9b4fb = $(`<div id="html_ec259efc96524db0a9c4717801f9b4fb" style="width: 100.0%; height: 100.0%;">Price: 1350000.0, Square Feet: 5370, Neighborhood: N/A         Predicted Price: 1631742.03099621</div>`)[0];
+            popup_531c5c04e0ff480781cbe8430307b7a0.setContent(html_ec259efc96524db0a9c4717801f9b4fb);
+        
+
+        marker_0ff9cbae6a714ef7a29ef0b433cd7a9c.bindPopup(popup_531c5c04e0ff480781cbe8430307b7a0)
+        ;
+
+        
+    
+    
+            var marker_93d2b51981d94b78a1424f4bcaa1ed38 = L.marker(
+                [47.5571, -122.14],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_b5664caf61684f47bb21a71be92d3099 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_93d2b51981d94b78a1424f4bcaa1ed38.setIcon(icon_b5664caf61684f47bb21a71be92d3099);
+        
+    
+        var popup_ed952b05836c4471af5e3f3cbe50da28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6b94303435f4d298ed46583377927b0 = $(`<div id="html_d6b94303435f4d298ed46583377927b0" style="width: 100.0%; height: 100.0%;">Price: 1680000.0, Square Feet: 7620, Neighborhood: Hilltop         Predicted Price: 2358587.1125666737</div>`)[0];
+            popup_ed952b05836c4471af5e3f3cbe50da28.setContent(html_d6b94303435f4d298ed46583377927b0);
+        
+
+        marker_93d2b51981d94b78a1424f4bcaa1ed38.bindPopup(popup_ed952b05836c4471af5e3f3cbe50da28)
+        ;
+
+        
+    
+    
+            var marker_6fa4ab825f9141f58d04f145380d619b = L.marker(
+                [47.5305, -122.135],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_02a4426c137d4505a052c7f56ed46bb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6fa4ab825f9141f58d04f145380d619b.setIcon(icon_02a4426c137d4505a052c7f56ed46bb8);
+        
+    
+        var popup_9d0865729a174c83ab0b7f5fd5b77121 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84c2c40424fa466f9a5c35b5252090bd = $(`<div id="html_84c2c40424fa466f9a5c35b5252090bd" style="width: 100.0%; height: 100.0%;">Price: 1500000.0, Square Feet: 5550, Neighborhood: N/A         Predicted Price: 1596421.544097339</div>`)[0];
+            popup_9d0865729a174c83ab0b7f5fd5b77121.setContent(html_84c2c40424fa466f9a5c35b5252090bd);
+        
+
+        marker_6fa4ab825f9141f58d04f145380d619b.bindPopup(popup_9d0865729a174c83ab0b7f5fd5b77121)
+        ;
+
+        
+    
+    
+            var marker_918cda7b6a8a4b729a8e4e20da50aa3b = L.marker(
+                [47.6008, -122.01],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_9ba1e335b2e3449f814768b1f6da1ecd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_918cda7b6a8a4b729a8e4e20da50aa3b.setIcon(icon_9ba1e335b2e3449f814768b1f6da1ecd);
+        
+    
+        var popup_04c13c1e5a2743fa91ba8e708febf347 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ffb7fb63c03a493db7b88992453b48de = $(`<div id="html_ffb7fb63c03a493db7b88992453b48de" style="width: 100.0%; height: 100.0%;">Price: 1500000.0, Square Feet: 5020, Neighborhood: Sammamish         Predicted Price: 1731144.446641563</div>`)[0];
+            popup_04c13c1e5a2743fa91ba8e708febf347.setContent(html_ffb7fb63c03a493db7b88992453b48de);
+        
+
+        marker_918cda7b6a8a4b729a8e4e20da50aa3b.bindPopup(popup_04c13c1e5a2743fa91ba8e708febf347)
+        ;
+
+        
+    
+    
+            var marker_c9ef9e6b3dbc45129ee098d202a1f400 = L.marker(
+                [47.5874, -121.965],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5db103a81a2c48dfa1f17f76bab33e04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c9ef9e6b3dbc45129ee098d202a1f400.setIcon(icon_5db103a81a2c48dfa1f17f76bab33e04);
+        
+    
+        var popup_eea99c22e85347848474de23b064fa79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf9f25548c2d42a1b78c2b9a337711d6 = $(`<div id="html_bf9f25548c2d42a1b78c2b9a337711d6" style="width: 100.0%; height: 100.0%;">Price: 1470000.0, Square Feet: 4930, Neighborhood: Sammamish         Predicted Price: 1829677.669372973</div>`)[0];
+            popup_eea99c22e85347848474de23b064fa79.setContent(html_bf9f25548c2d42a1b78c2b9a337711d6);
+        
+
+        marker_c9ef9e6b3dbc45129ee098d202a1f400.bindPopup(popup_eea99c22e85347848474de23b064fa79)
+        ;
+
+        
+    
+    
+            var marker_dbc63aadeb5746399d21ab476d3057e9 = L.marker(
+                [47.5316, -122.263],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_e0eb85f719dc42fdab7cb3e28bca45ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_dbc63aadeb5746399d21ab476d3057e9.setIcon(icon_e0eb85f719dc42fdab7cb3e28bca45ac);
+        
+    
+        var popup_91bb25e7e1dc4bd8ac2eeeed6cc72a04 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4a27a1e12d64d078857a6f72fe524d7 = $(`<div id="html_d4a27a1e12d64d078857a6f72fe524d7" style="width: 100.0%; height: 100.0%;">Price: 1610000.0, Square Feet: 5470, Neighborhood: Dunlap         Predicted Price: 2376202.6959919315</div>`)[0];
+            popup_91bb25e7e1dc4bd8ac2eeeed6cc72a04.setContent(html_d4a27a1e12d64d078857a6f72fe524d7);
+        
+
+        marker_dbc63aadeb5746399d21ab476d3057e9.bindPopup(popup_91bb25e7e1dc4bd8ac2eeeed6cc72a04)
+        ;
+
+        
+    
+    
+            var marker_0e38febb27db4cceb3179a75ae2a7c74 = L.marker(
+                [47.677, -122.275],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_475cc6e836ac4988955d474e34c94664 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_0e38febb27db4cceb3179a75ae2a7c74.setIcon(icon_475cc6e836ac4988955d474e34c94664);
+        
+    
+        var popup_1b9630ec7c9f47059912eda5ae58d38a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bf328e6d4e64127b1d1a0430e28e052 = $(`<div id="html_4bf328e6d4e64127b1d1a0430e28e052" style="width: 100.0%; height: 100.0%;">Price: 1540000.0, Square Feet: 5770, Neighborhood: View Ridge         Predicted Price: 1605967.2310184855</div>`)[0];
+            popup_1b9630ec7c9f47059912eda5ae58d38a.setContent(html_4bf328e6d4e64127b1d1a0430e28e052);
+        
+
+        marker_0e38febb27db4cceb3179a75ae2a7c74.bindPopup(popup_1b9630ec7c9f47059912eda5ae58d38a)
+        ;
+
+        
+    
+    
+            var marker_c7fcc54bf7974fd8ab4ce6f5ce6b9868 = L.marker(
+                [47.5348, -121.856],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f426debad8054669a944b90f6e7fd277 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c7fcc54bf7974fd8ab4ce6f5ce6b9868.setIcon(icon_f426debad8054669a944b90f6e7fd277);
+        
+    
+        var popup_45f36dc8373c4abd97ec79cc921d8063 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ea96a28c9fb482f9186aba26b504716 = $(`<div id="html_0ea96a28c9fb482f9186aba26b504716" style="width: 100.0%; height: 100.0%;">Price: 1210000.0, Square Feet: 4980, Neighborhood: Eagle Nest         Predicted Price: 1611860.6103058974</div>`)[0];
+            popup_45f36dc8373c4abd97ec79cc921d8063.setContent(html_0ea96a28c9fb482f9186aba26b504716);
+        
+
+        marker_c7fcc54bf7974fd8ab4ce6f5ce6b9868.bindPopup(popup_45f36dc8373c4abd97ec79cc921d8063)
+        ;
+
+        
+    
+    
+            var marker_1d78e5572c3f4bd694017979ff7b93a9 = L.marker(
+                [47.6409, -122.241],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_bee8e1e9dbe342c896b353ab78cf33c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1d78e5572c3f4bd694017979ff7b93a9.setIcon(icon_bee8e1e9dbe342c896b353ab78cf33c5);
+        
+    
+        var popup_5db349340e57425a87e8b5f509c8aba9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5ca9bab15f04c069540eaef50a7398f = $(`<div id="html_f5ca9bab15f04c069540eaef50a7398f" style="width: 100.0%; height: 100.0%;">Price: 3640000.0, Square Feet: 4830, Neighborhood: N/A         Predicted Price: 3358229.221361247</div>`)[0];
+            popup_5db349340e57425a87e8b5f509c8aba9.setContent(html_f5ca9bab15f04c069540eaef50a7398f);
+        
+
+        marker_1d78e5572c3f4bd694017979ff7b93a9.bindPopup(popup_5db349340e57425a87e8b5f509c8aba9)
+        ;
+
+        
+    
+    
+            var marker_5f592775869e4e96bda8236d8ff3d956 = L.marker(
+                [47.603, -122.012],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_baad27a72829419bb931aecc0bde4b55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_5f592775869e4e96bda8236d8ff3d956.setIcon(icon_baad27a72829419bb931aecc0bde4b55);
+        
+    
+        var popup_5c5c6776eaf04eca8ca58bfbc9b44577 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a5e52b4ab3443f79f5decc208700c01 = $(`<div id="html_7a5e52b4ab3443f79f5decc208700c01" style="width: 100.0%; height: 100.0%;">Price: 1680000.0, Square Feet: 4790, Neighborhood: Sammamish         Predicted Price: 1646381.1216920274</div>`)[0];
+            popup_5c5c6776eaf04eca8ca58bfbc9b44577.setContent(html_7a5e52b4ab3443f79f5decc208700c01);
+        
+
+        marker_5f592775869e4e96bda8236d8ff3d956.bindPopup(popup_5c5c6776eaf04eca8ca58bfbc9b44577)
+        ;
+
+        
+    
+    
+            var marker_9c3e8111731d41128b079556a0e152f7 = L.marker(
+                [47.5469, -122.127],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_bbe8c2b77b8d48d2aa8a4a94ac31c78e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9c3e8111731d41128b079556a0e152f7.setIcon(icon_bbe8c2b77b8d48d2aa8a4a94ac31c78e);
+        
+    
+        var popup_b830269f3c9449e883089dadb4daa767 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16c43750908643dab27d0c8ca126d91a = $(`<div id="html_16c43750908643dab27d0c8ca126d91a" style="width: 100.0%; height: 100.0%;">Price: 1470000.0, Square Feet: 5010, Neighborhood: N/A         Predicted Price: 1751706.953756866</div>`)[0];
+            popup_b830269f3c9449e883089dadb4daa767.setContent(html_16c43750908643dab27d0c8ca126d91a);
+        
+
+        marker_9c3e8111731d41128b079556a0e152f7.bindPopup(popup_b830269f3c9449e883089dadb4daa767)
+        ;
+
+        
+    
+    
+            var marker_7833afabaa644d6aa2aca6945fd86bc8 = L.marker(
+                [47.5928, -122.086],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5f354bd5f15545f7935dc8cc468adbff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7833afabaa644d6aa2aca6945fd86bc8.setIcon(icon_5f354bd5f15545f7935dc8cc468adbff);
+        
+    
+        var popup_8f3c1652e9d148089cfcdac36f2b04e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_824b843934284bc4ae62707233eea5ed = $(`<div id="html_824b843934284bc4ae62707233eea5ed" style="width: 100.0%; height: 100.0%;">Price: 3200000.0, Square Feet: 7000, Neighborhood: Sammamish         Predicted Price: 3114288.3028924805</div>`)[0];
+            popup_8f3c1652e9d148089cfcdac36f2b04e6.setContent(html_824b843934284bc4ae62707233eea5ed);
+        
+
+        marker_7833afabaa644d6aa2aca6945fd86bc8.bindPopup(popup_8f3c1652e9d148089cfcdac36f2b04e6)
+        ;
+
+        
+    
+    
+            var marker_e47dcacd032647548added0bc8162e8a = L.marker(
+                [47.5515, -122.113],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5d0875e5f73f450885a0bec92effa8a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e47dcacd032647548added0bc8162e8a.setIcon(icon_5d0875e5f73f450885a0bec92effa8a4);
+        
+    
+        var popup_9b9b6dbf6b244f0394ef88288b02064e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_48390fe909994989b32f95e0a7dd72ef = $(`<div id="html_48390fe909994989b32f95e0a7dd72ef" style="width: 100.0%; height: 100.0%;">Price: 2480000.0, Square Feet: 5310, Neighborhood: N/A         Predicted Price: 2113011.419613017</div>`)[0];
+            popup_9b9b6dbf6b244f0394ef88288b02064e.setContent(html_48390fe909994989b32f95e0a7dd72ef);
+        
+
+        marker_e47dcacd032647548added0bc8162e8a.bindPopup(popup_9b9b6dbf6b244f0394ef88288b02064e)
+        ;
+
+        
+    
+    
+            var marker_b3c41dd84cc341b4b48f2dbfd49c070b = L.marker(
+                [47.6395, -122.234],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_8076588c190044e4846378d901c03074 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b3c41dd84cc341b4b48f2dbfd49c070b.setIcon(icon_8076588c190044e4846378d901c03074);
+        
+    
+        var popup_e90883e929144a88aedea4cad261d497 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_688d557d8392413fb3e9ee0fcd15fa4a = $(`<div id="html_688d557d8392413fb3e9ee0fcd15fa4a" style="width: 100.0%; height: 100.0%;">Price: 3710000.0, Square Feet: 5550, Neighborhood: N/A         Predicted Price: 2906301.5771536026</div>`)[0];
+            popup_e90883e929144a88aedea4cad261d497.setContent(html_688d557d8392413fb3e9ee0fcd15fa4a);
+        
+
+        marker_b3c41dd84cc341b4b48f2dbfd49c070b.bindPopup(popup_e90883e929144a88aedea4cad261d497)
+        ;
+
+        
+    
+    
+            var marker_f4bafd0fb4584bb1b6d8e5d146ccd48d = L.marker(
+                [47.6878, -122.212],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_7f367a5827814fb5a306116e1b3f82c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f4bafd0fb4584bb1b6d8e5d146ccd48d.setIcon(icon_7f367a5827814fb5a306116e1b3f82c2);
+        
+    
+        var popup_436e1b165fba496b866aded3db28cec6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c162a5f47d054cf7ba4b913a3f765337 = $(`<div id="html_c162a5f47d054cf7ba4b913a3f765337" style="width: 100.0%; height: 100.0%;">Price: 1880000.0, Square Feet: 5810, Neighborhood: Kirkland         Predicted Price: 1625696.885506042</div>`)[0];
+            popup_436e1b165fba496b866aded3db28cec6.setContent(html_c162a5f47d054cf7ba4b913a3f765337);
+        
+
+        marker_f4bafd0fb4584bb1b6d8e5d146ccd48d.bindPopup(popup_436e1b165fba496b866aded3db28cec6)
+        ;
+
+        
+    
+    
+            var marker_a792b086a30f41a39dee58942fd6e12e = L.marker(
+                [47.6437, -122.356],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_46f1706a1cc44573acbe5f3e1ab8f55e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a792b086a30f41a39dee58942fd6e12e.setIcon(icon_46f1706a1cc44573acbe5f3e1ab8f55e);
+        
+    
+        var popup_ceccac6d8709404099b8a1b9cd73e7c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50c77af0e6204f899c3d9f3b0981ce59 = $(`<div id="html_50c77af0e6204f899c3d9f3b0981ce59" style="width: 100.0%; height: 100.0%;">Price: 1430000.0, Square Feet: 4960, Neighborhood: Queen Anne         Predicted Price: 1873116.7736240863</div>`)[0];
+            popup_ceccac6d8709404099b8a1b9cd73e7c6.setContent(html_50c77af0e6204f899c3d9f3b0981ce59);
+        
+
+        marker_a792b086a30f41a39dee58942fd6e12e.bindPopup(popup_ceccac6d8709404099b8a1b9cd73e7c6)
+        ;
+
+        
+    
+    
+            var marker_abbee1d557764dd88f8e4c8f3034367a = L.marker(
+                [47.5455, -122.214],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5651c98a439e40dba1edb39ef13aa747 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_abbee1d557764dd88f8e4c8f3034367a.setIcon(icon_5651c98a439e40dba1edb39ef13aa747);
+        
+    
+        var popup_336b325fcd784550a06bc2404d2ac8c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e83ff8803814886b939615662fdb020 = $(`<div id="html_8e83ff8803814886b939615662fdb020" style="width: 100.0%; height: 100.0%;">Price: 1650000.0, Square Feet: 5550, Neighborhood: Mercer Island         Predicted Price: 1546827.7168229986</div>`)[0];
+            popup_336b325fcd784550a06bc2404d2ac8c5.setContent(html_8e83ff8803814886b939615662fdb020);
+        
+
+        marker_abbee1d557764dd88f8e4c8f3034367a.bindPopup(popup_336b325fcd784550a06bc2404d2ac8c5)
+        ;
+
+        
+    
+    
+            var marker_bf7edf4ed9424d74bb8f21a95df311ba = L.marker(
+                [47.6304, -122.236],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_7bf13b4d0d7c43dc8109d5b4ee7b0fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bf7edf4ed9424d74bb8f21a95df311ba.setIcon(icon_7bf13b4d0d7c43dc8109d5b4ee7b0fa4);
+        
+    
+        var popup_2f7b09042db64fb2b7501b47d8143630 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c00a64547e5540b6a879a4754e7bcba1 = $(`<div id="html_c00a64547e5540b6a879a4754e7bcba1" style="width: 100.0%; height: 100.0%;">Price: 2460000.0, Square Feet: 6500, Neighborhood: N/A         Predicted Price: 2897575.0189715032</div>`)[0];
+            popup_2f7b09042db64fb2b7501b47d8143630.setContent(html_c00a64547e5540b6a879a4754e7bcba1);
+        
+
+        marker_bf7edf4ed9424d74bb8f21a95df311ba.bindPopup(popup_2f7b09042db64fb2b7501b47d8143630)
+        ;
+
+        
+    
+    
+            var marker_8988010ac0cd41e4bd480a70cf313fab = L.marker(
+                [47.5605, -121.905],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_69cc30b95aa44a4cbf1174d426634b48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8988010ac0cd41e4bd480a70cf313fab.setIcon(icon_69cc30b95aa44a4cbf1174d426634b48);
+        
+    
+        var popup_ba54426aa574476a8c0b7ec5b38783b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cbad93810f6f4c7183651731c7c15e89 = $(`<div id="html_cbad93810f6f4c7183651731c7c15e89" style="width: 100.0%; height: 100.0%;">Price: 1860000.0, Square Feet: 5240, Neighborhood: N/A         Predicted Price: 1453624.1563554243</div>`)[0];
+            popup_ba54426aa574476a8c0b7ec5b38783b0.setContent(html_cbad93810f6f4c7183651731c7c15e89);
+        
+
+        marker_8988010ac0cd41e4bd480a70cf313fab.bindPopup(popup_ba54426aa574476a8c0b7ec5b38783b0)
+        ;
+
+        
+    
+    
+            var marker_fa9dffce4e004bd786066a6661ff1e80 = L.marker(
+                [47.3814, -122.164],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_01b527541cc6493b86b231e0808dc486 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fa9dffce4e004bd786066a6661ff1e80.setIcon(icon_01b527541cc6493b86b231e0808dc486);
+        
+    
+        var popup_4e5ffc321fa64e2d87fcf0d4348297eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68e3dd232f8c41d0a9c08b053cfc7714 = $(`<div id="html_68e3dd232f8c41d0a9c08b053cfc7714" style="width: 100.0%; height: 100.0%;">Price: 784500.0, Square Feet: 5820, Neighborhood: Kensington Heights         Predicted Price: 1531676.665951634</div>`)[0];
+            popup_4e5ffc321fa64e2d87fcf0d4348297eb.setContent(html_68e3dd232f8c41d0a9c08b053cfc7714);
+        
+
+        marker_fa9dffce4e004bd786066a6661ff1e80.bindPopup(popup_4e5ffc321fa64e2d87fcf0d4348297eb)
+        ;
+
+        
+    
+    
+            var marker_58f99e50d25d4663934f0aba276a8499 = L.marker(
+                [47.7283, -122.076],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_b2105b2d066a4ec883074f947812d0a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_58f99e50d25d4663934f0aba276a8499.setIcon(icon_b2105b2d066a4ec883074f947812d0a5);
+        
+    
+        var popup_77de2dcd7a494a62b1b82b4f315842de = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19af7de4d5f7479493a5f0c88cca1473 = $(`<div id="html_19af7de4d5f7479493a5f0c88cca1473" style="width: 100.0%; height: 100.0%;">Price: 1150000.0, Square Feet: 5300, Neighborhood: Cottage Lake         Predicted Price: 1561680.5507267187</div>`)[0];
+            popup_77de2dcd7a494a62b1b82b4f315842de.setContent(html_19af7de4d5f7479493a5f0c88cca1473);
+        
+
+        marker_58f99e50d25d4663934f0aba276a8499.bindPopup(popup_77de2dcd7a494a62b1b82b4f315842de)
+        ;
+
+        
+    
+    
+            var marker_4039e442fbea419c9cf04a780a607596 = L.marker(
+                [47.5423, -122.111],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_0bc5d67268e3407b8a014787698d0344 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_4039e442fbea419c9cf04a780a607596.setIcon(icon_0bc5d67268e3407b8a014787698d0344);
+        
+    
+        var popup_f9fa82259c874ee29b07e84d7755916a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb7ae264023b4986b2e8098c2557ca3f = $(`<div id="html_fb7ae264023b4986b2e8098c2557ca3f" style="width: 100.0%; height: 100.0%;">Price: 1900000.0, Square Feet: 5080, Neighborhood: N/A         Predicted Price: 1594069.2990387992</div>`)[0];
+            popup_f9fa82259c874ee29b07e84d7755916a.setContent(html_fb7ae264023b4986b2e8098c2557ca3f);
+        
+
+        marker_4039e442fbea419c9cf04a780a607596.bindPopup(popup_f9fa82259c874ee29b07e84d7755916a)
+        ;
+
+        
+    
+    
+            var marker_ab4a728f57b847dcb7e887eea3855bc5 = L.marker(
+                [47.6582, -122.038],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_59fd6831e0444be9938782b0ffdb16d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ab4a728f57b847dcb7e887eea3855bc5.setIcon(icon_59fd6831e0444be9938782b0ffdb16d7);
+        
+    
+        var popup_acc09fed79a44435b5186e92283c6bb9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03605719c370471eb02dd721a8333f9e = $(`<div id="html_03605719c370471eb02dd721a8333f9e" style="width: 100.0%; height: 100.0%;">Price: 1360000.0, Square Feet: 5430, Neighborhood: N/A         Predicted Price: 1460358.8646438485</div>`)[0];
+            popup_acc09fed79a44435b5186e92283c6bb9.setContent(html_03605719c370471eb02dd721a8333f9e);
+        
+
+        marker_ab4a728f57b847dcb7e887eea3855bc5.bindPopup(popup_acc09fed79a44435b5186e92283c6bb9)
+        ;
+
+        
+    
+    
+            var marker_7a460327f6934cc782de797cab4db8ef = L.marker(
+                [47.65, -122.065],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_9bfca62d9c5746ea8b4ffcda73677865 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_7a460327f6934cc782de797cab4db8ef.setIcon(icon_9bfca62d9c5746ea8b4ffcda73677865);
+        
+    
+        var popup_a016cd3b0172437595714c101265e349 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_421861b2383a4f52b4b1dedd47584ac7 = $(`<div id="html_421861b2383a4f52b4b1dedd47584ac7" style="width: 100.0%; height: 100.0%;">Price: 1580000.0, Square Feet: 5610, Neighborhood: Sammamish         Predicted Price: 1683147.634647489</div>`)[0];
+            popup_a016cd3b0172437595714c101265e349.setContent(html_421861b2383a4f52b4b1dedd47584ac7);
+        
+
+        marker_7a460327f6934cc782de797cab4db8ef.bindPopup(popup_a016cd3b0172437595714c101265e349)
+        ;
+
+        
+    
+    
+            var marker_933d8dd702cc432b9fed219d356059bc = L.marker(
+                [47.6364, -122.209],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_a3b41be835f84eb78a0954040fece0ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_933d8dd702cc432b9fed219d356059bc.setIcon(icon_a3b41be835f84eb78a0954040fece0ab);
+        
+    
+        var popup_4d24a868e9634517be43e14b496fa68d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8e3b0466fc848fba416804b3841ba9b = $(`<div id="html_d8e3b0466fc848fba416804b3841ba9b" style="width: 100.0%; height: 100.0%;">Price: 2320000.0, Square Feet: 5050, Neighborhood: N/A         Predicted Price: 2035576.2353224831</div>`)[0];
+            popup_4d24a868e9634517be43e14b496fa68d.setContent(html_d8e3b0466fc848fba416804b3841ba9b);
+        
+
+        marker_933d8dd702cc432b9fed219d356059bc.bindPopup(popup_4d24a868e9634517be43e14b496fa68d)
+        ;
+
+        
+    
+    
+            var marker_933b44dede734d6eada04e8851d93de0 = L.marker(
+                [47.5311, -122.134],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_b97eb08fe6c84f0db47fd44abc80d1d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_933b44dede734d6eada04e8851d93de0.setIcon(icon_b97eb08fe6c84f0db47fd44abc80d1d7);
+        
+    
+        var popup_c7a08919b6884503ae60131af6b19525 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_916f51e9cb2e4b33a806350795411253 = $(`<div id="html_916f51e9cb2e4b33a806350795411253" style="width: 100.0%; height: 100.0%;">Price: 1080000.0, Square Feet: 4800, Neighborhood: N/A         Predicted Price: 1181506.0165248215</div>`)[0];
+            popup_c7a08919b6884503ae60131af6b19525.setContent(html_916f51e9cb2e4b33a806350795411253);
+        
+
+        marker_933b44dede734d6eada04e8851d93de0.bindPopup(popup_c7a08919b6884503ae60131af6b19525)
+        ;
+
+        
+    
+    
+            var marker_67106b560c294ebeb4ec0f4e49b046d4 = L.marker(
+                [47.5406, -121.982],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_a192f6556a74402eacec16d3fbdcea2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_67106b560c294ebeb4ec0f4e49b046d4.setIcon(icon_a192f6556a74402eacec16d3fbdcea2b);
+        
+    
+        var popup_96d6a8a5d23f4b41bc5a75b563464296 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc7f4b5aaf83440fba7d3ce2bc1b6738 = $(`<div id="html_fc7f4b5aaf83440fba7d3ce2bc1b6738" style="width: 100.0%; height: 100.0%;">Price: 2700000.0, Square Feet: 7850, Neighborhood: N/A         Predicted Price: 2655509.832159085</div>`)[0];
+            popup_96d6a8a5d23f4b41bc5a75b563464296.setContent(html_fc7f4b5aaf83440fba7d3ce2bc1b6738);
+        
+
+        marker_67106b560c294ebeb4ec0f4e49b046d4.bindPopup(popup_96d6a8a5d23f4b41bc5a75b563464296)
+        ;
+
+        
+    
+    
+            var marker_ceb66e8e23a449c9b0a927ef3cf81c74 = L.marker(
+                [47.7009, -122.059],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_636d2d6b68714474829cc85f4c131e1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ceb66e8e23a449c9b0a927ef3cf81c74.setIcon(icon_636d2d6b68714474829cc85f4c131e1e);
+        
+    
+        var popup_3481dfd203c94302ad2efd10d29cc86c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ff98d6754ce84a938685abd468f98284 = $(`<div id="html_ff98d6754ce84a938685abd468f98284" style="width: 100.0%; height: 100.0%;">Price: 1240000.0, Square Feet: 5120, Neighborhood: N/A         Predicted Price: 1328161.6907537044</div>`)[0];
+            popup_3481dfd203c94302ad2efd10d29cc86c.setContent(html_ff98d6754ce84a938685abd468f98284);
+        
+
+        marker_ceb66e8e23a449c9b0a927ef3cf81c74.bindPopup(popup_3481dfd203c94302ad2efd10d29cc86c)
+        ;
+
+        
+    
+    
+            var marker_a3c5d1cbcf9c44e8a04129416765c4b2 = L.marker(
+                [47.592, -122.085],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_22c59a27f54345948c4a4e6e0fbbeb4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a3c5d1cbcf9c44e8a04129416765c4b2.setIcon(icon_22c59a27f54345948c4a4e6e0fbbeb4e);
+        
+    
+        var popup_160e4fc7838d4fb1846d9036110e0fa4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7373d086074348f0b83bb475910b7086 = $(`<div id="html_7373d086074348f0b83bb475910b7086" style="width: 100.0%; height: 100.0%;">Price: 1480000.0, Square Feet: 5220, Neighborhood: Sammamish         Predicted Price: 1618629.3378770612</div>`)[0];
+            popup_160e4fc7838d4fb1846d9036110e0fa4.setContent(html_7373d086074348f0b83bb475910b7086);
+        
+
+        marker_a3c5d1cbcf9c44e8a04129416765c4b2.bindPopup(popup_160e4fc7838d4fb1846d9036110e0fa4)
+        ;
+
+        
+    
+    
+            var marker_b6aa1e5dbd234760845e02bc1bf11807 = L.marker(
+                [47.6245, -122.21],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_ab8112945fe54cc9a72218f877f61f82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b6aa1e5dbd234760845e02bc1bf11807.setIcon(icon_ab8112945fe54cc9a72218f877f61f82);
+        
+    
+        var popup_22733d3c98e54532b1fb74122f6b60d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d183b2a725e246c2984b60972d94a490 = $(`<div id="html_d183b2a725e246c2984b60972d94a490" style="width: 100.0%; height: 100.0%;">Price: 2150000.0, Square Feet: 5060, Neighborhood: N/A         Predicted Price: 2106055.397614437</div>`)[0];
+            popup_22733d3c98e54532b1fb74122f6b60d3.setContent(html_d183b2a725e246c2984b60972d94a490);
+        
+
+        marker_b6aa1e5dbd234760845e02bc1bf11807.bindPopup(popup_22733d3c98e54532b1fb74122f6b60d3)
+        ;
+
+        
+    
+    
+            var marker_90bbd9b7e1ae40bdba7613e0bc621173 = L.marker(
+                [47.4695, -121.775],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_8da25798a13445cd868664536b3d5bf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90bbd9b7e1ae40bdba7613e0bc621173.setIcon(icon_8da25798a13445cd868664536b3d5bf2);
+        
+    
+        var popup_d7927491fd844d41b5f470f4ed717bda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b46ee95bffe4a0c9fa8203ef3974491 = $(`<div id="html_5b46ee95bffe4a0c9fa8203ef3974491" style="width: 100.0%; height: 100.0%;">Price: 1040000.0, Square Feet: 4920, Neighborhood: Riverbend         Predicted Price: 1401635.6610595526</div>`)[0];
+            popup_d7927491fd844d41b5f470f4ed717bda.setContent(html_5b46ee95bffe4a0c9fa8203ef3974491);
+        
+
+        marker_90bbd9b7e1ae40bdba7613e0bc621173.bindPopup(popup_d7927491fd844d41b5f470f4ed717bda)
+        ;
+
+        
+    
+    
+            var marker_b0e9f0bffabe4e48aad8084d1170184a = L.marker(
+                [47.6364, -122.214],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_58bcdc15e6524facbf809ce951cbec4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b0e9f0bffabe4e48aad8084d1170184a.setIcon(icon_58bcdc15e6524facbf809ce951cbec4a);
+        
+    
+        var popup_363e3d16cbbb4c5dac255cc103920819 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f1af81cf8134096a34966716a2f01ba = $(`<div id="html_0f1af81cf8134096a34966716a2f01ba" style="width: 100.0%; height: 100.0%;">Price: 3200000.0, Square Feet: 4810, Neighborhood: N/A         Predicted Price: 2181551.2736246567</div>`)[0];
+            popup_363e3d16cbbb4c5dac255cc103920819.setContent(html_0f1af81cf8134096a34966716a2f01ba);
+        
+
+        marker_b0e9f0bffabe4e48aad8084d1170184a.bindPopup(popup_363e3d16cbbb4c5dac255cc103920819)
+        ;
+
+        
+    
+    
+            var marker_173e12834cac4fd2b6126272f2eabe6a = L.marker(
+                [47.3389, -122.334],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_5591b853d3dc44a4a7bb2ee41f90c4df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_173e12834cac4fd2b6126272f2eabe6a.setIcon(icon_5591b853d3dc44a4a7bb2ee41f90c4df);
+        
+    
+        var popup_e4691656fc944a8aa7c2033072631bf8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5ee4309d9ce4a61ae7ba9182b45b62e = $(`<div id="html_e5ee4309d9ce4a61ae7ba9182b45b62e" style="width: 100.0%; height: 100.0%;">Price: 950000.0, Square Feet: 5635, Neighborhood: N/A         Predicted Price: 1386779.3142721362</div>`)[0];
+            popup_e4691656fc944a8aa7c2033072631bf8.setContent(html_e5ee4309d9ce4a61ae7ba9182b45b62e);
+        
+
+        marker_173e12834cac4fd2b6126272f2eabe6a.bindPopup(popup_e4691656fc944a8aa7c2033072631bf8)
+        ;
+
+        
+    
+    
+            var marker_2c59307cb84c410a9b22fca8ff1ed49b = L.marker(
+                [47.664, -121.878],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f693dc017d014c11a74b70a2efa9bdd8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_2c59307cb84c410a9b22fca8ff1ed49b.setIcon(icon_f693dc017d014c11a74b70a2efa9bdd8);
+        
+    
+        var popup_e6ecec7817ce4679913c8df8b8f1d81b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c38d2e1aed6b4a2a89318aa5213a787a = $(`<div id="html_c38d2e1aed6b4a2a89318aa5213a787a" style="width: 100.0%; height: 100.0%;">Price: 1600000.0, Square Feet: 6530, Neighborhood: Carnation         Predicted Price: 2037081.1107862664</div>`)[0];
+            popup_e6ecec7817ce4679913c8df8b8f1d81b.setContent(html_c38d2e1aed6b4a2a89318aa5213a787a);
+        
+
+        marker_2c59307cb84c410a9b22fca8ff1ed49b.bindPopup(popup_e6ecec7817ce4679913c8df8b8f1d81b)
+        ;
+
+        
+    
+    
+            var marker_d97627cdb69241fc868c034eaa1ffad2 = L.marker(
+                [47.5016, -121.905],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_ea923b7351f04a7296358a55b6d3d9c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d97627cdb69241fc868c034eaa1ffad2.setIcon(icon_ea923b7351f04a7296358a55b6d3d9c8);
+        
+    
+        var popup_47b68859243c4f6b9cca24c214983e27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe1b160df5cc4dc28576637de5908bfb = $(`<div id="html_fe1b160df5cc4dc28576637de5908bfb" style="width: 100.0%; height: 100.0%;">Price: 1800000.0, Square Feet: 6370, Neighborhood: Preston         Predicted Price: 2060810.7692501186</div>`)[0];
+            popup_47b68859243c4f6b9cca24c214983e27.setContent(html_fe1b160df5cc4dc28576637de5908bfb);
+        
+
+        marker_d97627cdb69241fc868c034eaa1ffad2.bindPopup(popup_47b68859243c4f6b9cca24c214983e27)
+        ;
+
+        
+    
+    
+            var marker_83b998de4add480a99b272b8be71318d = L.marker(
+                [47.3166, -122.046],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_237fdb3e24bc434bbf08f2c5502ab487 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_83b998de4add480a99b272b8be71318d.setIcon(icon_237fdb3e24bc434bbf08f2c5502ab487);
+        
+    
+        var popup_54dd7e4fb8c44c0fba92454ab5c0c316 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc31b2b7946940769423088ffb3c08d5 = $(`<div id="html_bc31b2b7946940769423088ffb3c08d5" style="width: 100.0%; height: 100.0%;">Price: 790000.0, Square Feet: 5370, Neighborhood: N/A         Predicted Price: 1198731.0785478598</div>`)[0];
+            popup_54dd7e4fb8c44c0fba92454ab5c0c316.setContent(html_bc31b2b7946940769423088ffb3c08d5);
+        
+
+        marker_83b998de4add480a99b272b8be71318d.bindPopup(popup_54dd7e4fb8c44c0fba92454ab5c0c316)
+        ;
+
+        
+    
+    
+            var marker_f42bf78f7be14e4a9dad2928b97b719c = L.marker(
+                [47.5443, -121.87],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_844d21a8c8b742e58250c91fb9d28dea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f42bf78f7be14e4a9dad2928b97b719c.setIcon(icon_844d21a8c8b742e58250c91fb9d28dea);
+        
+    
+        var popup_f5e162e3427a4732893c37705c24888c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4a871e1262ef44cc9084a42b47f87501 = $(`<div id="html_4a871e1262ef44cc9084a42b47f87501" style="width: 100.0%; height: 100.0%;">Price: 1150000.0, Square Feet: 5940, Neighborhood: Snoqualmie         Predicted Price: 1824583.4756119354</div>`)[0];
+            popup_f5e162e3427a4732893c37705c24888c.setContent(html_4a871e1262ef44cc9084a42b47f87501);
+        
+
+        marker_f42bf78f7be14e4a9dad2928b97b719c.bindPopup(popup_f5e162e3427a4732893c37705c24888c)
+        ;
+
+        
+    
+    
+            var marker_630a1be811ff49f0807aaae196e3629a = L.marker(
+                [47.5655, -122.129],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_71fa3e0c9092466297c4f59f08dde968 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_630a1be811ff49f0807aaae196e3629a.setIcon(icon_71fa3e0c9092466297c4f59f08dde968);
+        
+    
+        var popup_d1f6ea8b3c1b4143b9e0662bfcfba75f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d04f20d019d4ecab97efb00afc2d916 = $(`<div id="html_6d04f20d019d4ecab97efb00afc2d916" style="width: 100.0%; height: 100.0%;">Price: 1270000.0, Square Feet: 5520, Neighborhood: Eastgate         Predicted Price: 1339979.205603423</div>`)[0];
+            popup_d1f6ea8b3c1b4143b9e0662bfcfba75f.setContent(html_6d04f20d019d4ecab97efb00afc2d916);
+        
+
+        marker_630a1be811ff49f0807aaae196e3629a.bindPopup(popup_d1f6ea8b3c1b4143b9e0662bfcfba75f)
+        ;
+
+        
+    
+    
+            var marker_113119b90c2b4e8c8d1ca477628bb0ca = L.marker(
+                [47.5455, -122.211],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_b61f1a33e4fd47bc8e8f8c4fc24b1d29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_113119b90c2b4e8c8d1ca477628bb0ca.setIcon(icon_b61f1a33e4fd47bc8e8f8c4fc24b1d29);
+        
+    
+        var popup_bd4aac65647440aca00440b14892bd03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1a9e5718d104a018298d3a72f7309a5 = $(`<div id="html_d1a9e5718d104a018298d3a72f7309a5" style="width: 100.0%; height: 100.0%;">Price: 2350000.0, Square Feet: 5010, Neighborhood: Mercer Island         Predicted Price: 1832627.0981055389</div>`)[0];
+            popup_bd4aac65647440aca00440b14892bd03.setContent(html_d1a9e5718d104a018298d3a72f7309a5);
+        
+
+        marker_113119b90c2b4e8c8d1ca477628bb0ca.bindPopup(popup_bd4aac65647440aca00440b14892bd03)
+        ;
+
+        
+    
+    
+            var marker_0b419799e2664ef08d10f47c065bade1 = L.marker(
+                [47.5491, -122.104],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f17570746b18477abc4be2fc6b093168 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_0b419799e2664ef08d10f47c065bade1.setIcon(icon_f17570746b18477abc4be2fc6b093168);
+        
+    
+        var popup_40608c141d084b52a78ddcfb83db0686 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bbe92a7e70804c38a17035e7130bc61c = $(`<div id="html_bbe92a7e70804c38a17035e7130bc61c" style="width: 100.0%; height: 100.0%;">Price: 2000000.0, Square Feet: 5640, Neighborhood: N/A         Predicted Price: 1875273.7690940676</div>`)[0];
+            popup_40608c141d084b52a78ddcfb83db0686.setContent(html_bbe92a7e70804c38a17035e7130bc61c);
+        
+
+        marker_0b419799e2664ef08d10f47c065bade1.bindPopup(popup_40608c141d084b52a78ddcfb83db0686)
+        ;
+
+        
+    
+    
+            var marker_bca2487548284dc8b2e9a0d3ecb5e3f6 = L.marker(
+                [47.6575, -122.006],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_f4abee596a814bfbb6ae208cacd7b23c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bca2487548284dc8b2e9a0d3ecb5e3f6.setIcon(icon_f4abee596a814bfbb6ae208cacd7b23c);
+        
+    
+        var popup_a203af73542c46c9b011ea1540dae509 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c91e295cc64473aa085472ec76b3e6f = $(`<div id="html_2c91e295cc64473aa085472ec76b3e6f" style="width: 100.0%; height: 100.0%;">Price: 1410000.0, Square Feet: 4920, Neighborhood: N/A         Predicted Price: 1339926.2159258516</div>`)[0];
+            popup_a203af73542c46c9b011ea1540dae509.setContent(html_2c91e295cc64473aa085472ec76b3e6f);
+        
+
+        marker_bca2487548284dc8b2e9a0d3ecb5e3f6.bindPopup(popup_a203af73542c46c9b011ea1540dae509)
+        ;
+
+        
+    
+    
+            var marker_c43fa437c1b0486fae93c720a7531b47 = L.marker(
+                [47.62, -122.207],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_bd712df559c540a68a3eb2bb6309bd2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c43fa437c1b0486fae93c720a7531b47.setIcon(icon_bd712df559c540a68a3eb2bb6309bd2d);
+        
+    
+        var popup_c774ba842d864c4fbe21b92f7ae907f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78e96101f6a341efa23b49402d9b771c = $(`<div id="html_78e96101f6a341efa23b49402d9b771c" style="width: 100.0%; height: 100.0%;">Price: 3000000.0, Square Feet: 5090, Neighborhood: Clyde         Predicted Price: 2102911.901559312</div>`)[0];
+            popup_c774ba842d864c4fbe21b92f7ae907f5.setContent(html_78e96101f6a341efa23b49402d9b771c);
+        
+
+        marker_c43fa437c1b0486fae93c720a7531b47.bindPopup(popup_c774ba842d864c4fbe21b92f7ae907f5)
+        ;
+
+        
+    
+    
+            var marker_74456e3ae22146e993c970cfcbd79032 = L.marker(
+                [47.6502, -122.066],
+                {}
+            ).addTo(map_6ec4d568db694d3891596f3da2aa63ea);
+        
+    
+            var icon_6814d803aac8452b932f7377e5fb4146 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_74456e3ae22146e993c970cfcbd79032.setIcon(icon_6814d803aac8452b932f7377e5fb4146);
+        
+    
+        var popup_f86bbf112d2d49799124977965f930c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3214d45cb33455581c4adb05ca6d9d2 = $(`<div id="html_b3214d45cb33455581c4adb05ca6d9d2" style="width: 100.0%; height: 100.0%;">Price: 1220000.0, Square Feet: 4910, Neighborhood: Sammamish         Predicted Price: 1418742.3078258974</div>`)[0];
+            popup_f86bbf112d2d49799124977965f930c3.setContent(html_b3214d45cb33455581c4adb05ca6d9d2);
+        
+
+        marker_74456e3ae22146e993c970cfcbd79032.bindPopup(popup_f86bbf112d2d49799124977965f930c3)
+        ;
+
+        
+    
+</script>
