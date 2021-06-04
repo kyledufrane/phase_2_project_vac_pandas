@@ -121,6 +121,8 @@ Once these items were encoded our R-squared increased 0.84.
 
 ### Deployment
 
+Note: To utilize the interactive maps download a local web server, download the files to your local pc, and open them in a local web browser. 
+
 **Interactive Map** based on a filter of 4 bedroom homes that are greater than 4750 sq ft
 
 ![Folium Map](Visualizations/Folium_map.html)
