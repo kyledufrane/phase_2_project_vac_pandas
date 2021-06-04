@@ -33,7 +33,7 @@ Lastly, we chose our relevant columns that would have a positive effect on the m
 
 Collinearity:
 
---------------------------------
+|----------------|------------|
 | price          |   1.000000 |
 | prediction     |   0.926310 |
 | sqft_grade     |   0.756248 |
@@ -94,7 +94,7 @@ To take advantage of other correlations we used PolynomialFeatures from the skle
 
 PolynomnialFeatures(degree=2) results:
 
------------------------
+|---------|-----------|
 | x0      |  1.000000 |
 | x0^2    |  0.839331 |
 | x0 x1   |  0.937872 |
@@ -108,7 +108,9 @@ PolynomnialFeatures(degree=2) results:
 | x0 x13  |  0.938750 |
 | x3 x9   |  0.756248 |
 
-Lastly, for our final model, we used the OneHotEncoder through the sklearn.preprocessing library. We encoded three categorical values being the mo_sold (month sold), Zip_city (city & zip code), yr_renovated (year renovated). Once these items were encoded our R-squared increased 0.84.
+Lastly, for our final model, we used the OneHotEncoder through the sklearn.preprocessing library. We encoded three categorical values being the mo_sold (month sold), Zip_city (city & zip code), yr_renovated (year renovated). 
+
+Once these items were encoded our R-squared increased 0.84.
 
 
 ### Evaluating
