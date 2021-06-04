@@ -128,7 +128,7 @@ Below are the Linear Regression assumption checks we used on our final model:
 ### Deployment
 
 
-**Note:** To utilize the interactive maps download a local web server(such as personal web server in the app store), download the files to your local pc, and open them in a local web browser. 
+**Note:** To utilize the interactive maps download a local web server(such as personal web server in the app store), download the files to your local pc, and open them in a local web browser **OR** go to the visualization folder and open within jupyter notebook. 
 
 **Interactive Map** based on a filter of 4 bedroom homes that are greater than 4750 sq ft
 
@@ -143,7 +143,9 @@ Below are the Linear Regression assumption checks we used on our final model:
 
 ### Next Steps
 
-Create an interactive front end on a public server for end users to interact with.
+
+Moving forward we want to identify what factors are causing the model to under or over predict. Also, we could plug in active houses on the market to direct our stakeholder to good under priced homes based on our model predictions.  
+
 
 ## For More Information
 
