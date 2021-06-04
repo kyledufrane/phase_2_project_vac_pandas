@@ -7,7 +7,7 @@
 
 ## Business Understanding
 
-Our stakeholder is a family that is moving to the Seattle area. They're looking for a solution that will enable them to search for properties based on their needs.  
+Our stakeholder is a family that is moving to the Seattle area. They're looking for a solution that will enable them to search for properties based for their needs.  
 
 
 ### Data Understanding
@@ -121,14 +121,23 @@ Once these items were encoded our R-squared increased 0.84.
 
 ### Deployment
 
+**Interactive Map** based on a filter of 4 bedroom homes that are greater than 4750 sq ft
+
+![Folium Map](Visualizations/Folium_map.html)
+
+
+**Interactive Map** based on coefficients
+
+![Coefficient Map](Visualizations/choro_map.html)
 
 
 ### Next Steps
 
+Create an interactive front end on a public server for end users to interact with.
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./final_notebook.ipynb) or our [presentation](./final_presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](final_notebook.ipynb) or our [presentation](final_presentation.pdf).
 
 
 
