@@ -112,7 +112,7 @@ Once these items were encoded our R-squared increased 0.84.
 
 **Heteroscedasticity**
 
-![Heteroscedasticity](Visualizations/residuals.png)
+![Heteroscedasticity](Visualizations/heter.png)
 
 **Normalization**
 
